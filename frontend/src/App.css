@@ -2,7 +2,7 @@
   width:430px;
 }
 
-/***************************Navbar stye*************************************/
+/***************************Navbar style*************************************/
 .navbar-border{
   background-image: radial-gradient(circle, rgba(190, 223, 193, 0) 3%,rgba(190, 223, 193,100) );
   height:80px;
@@ -18,8 +18,6 @@ display:flex;
   justify-content: center;
   align-items: center;
 }
-
-
 
 .logo-style{
   width:80px;

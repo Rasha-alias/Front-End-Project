@@ -12,7 +12,7 @@ import {Container, Navbar }from 'react-bootstrap/';
 /**
  * Class representing a Header (Navbar).
  * @extends React component
- * @return Nav as components (Brand, Om oss) that links to thier pages
+ * @return Nav as components (Brand) that links to its page.
  */
 
 class Header extends React.Component {
@@ -26,16 +26,17 @@ return (
   <div>
       <Navbar collapseOnSelect expand="sm" variant="light" className="navbar-border">
 
-              <Container>
-                <Navbar.Brand href="#home" className="brand ">  
-                <Link className="nav-link" to ="/"> <img src={logo} alt = "logo" className="logo-style"/></Link>
-                </Navbar.Brand>
-            </Container>
-        </Navbar>
+          <Container>
+            <Navbar.Brand href="#home" className="brand ">  
+              <Link className="nav-link" to ="/"> <img src={logo} alt = "logo" className="logo-style"/></Link>
+            </Navbar.Brand>
+        </Container>
 
-       <Routes>
-         <Route path="/" element ={<HomePage/>} />
-       </Routes>
+      </Navbar>
+
+      <Routes>
+        <Route path="/" element ={<HomePage/>} />
+      </Routes>
  
    </div>
  </Router>
