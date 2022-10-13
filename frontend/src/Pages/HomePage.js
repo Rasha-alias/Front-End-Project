@@ -1,8 +1,11 @@
 import React from 'react'
+import Icons from "../Components/Icons";
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div>
+        <Icons/>
+    </div>
   )
 }
 
