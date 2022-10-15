@@ -20,26 +20,48 @@ box-shadow: 1px 1px 6px rgb(52, 43, 43);
 }
 
 /*****************************Body style*****************************/
-.body{
-width: 400px;
-margin-top: 50px;
+.body-container{
+   width: 400px;
+   margin-top: 30px;
 }
 
 .flex-container{
     width: 100%;
     display:flex;
     flex-wrap: wrap;
-    overflow:scroll;
     justify-content: space-around;
 }
 
 .card-style{
-    width: 10rem;
-    height:60px;
-    margin: 10px;
+    width: 40%;
+    height:150px;
+    margin: 15px;
+    border-radius: 50px 50px 20px 20px;
+    box-shadow: 2px 2px 5px  rgb(52, 43, 43);
+}
+
+.card-style:hover{
+    box-shadow: 2px 2px 8px 1px rgb(71, 84, 82);
+}
+
+.card-image{
+    width:80px;
+    height:80px;
+    margin: 10px 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-body{
+    background-color:rgba(153, 217, 159, 0.6);
+    height:50px;
+    border-radius: 0 0 20px 20px;
 }
 
 .card-title{
-    font-size: 16px;
-    text-align: center;
+   font-size: 14px;
+   font-weight: bold;
+   text-align: center;
 }
+
