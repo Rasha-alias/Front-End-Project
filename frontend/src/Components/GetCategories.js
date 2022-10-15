@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import "./ComponentsStyle.css";
-import Bröd from "./Images/Bröd.png"
 
 import {Container, Row, Col, Card} from "react-bootstrap";
 
@@ -46,7 +45,7 @@ const GetCategories = () => {
 
     return (
         <>
-        <Container className="body">
+        <Container className="body-container">
             <Row>
                 <Col>
                 <div className="flex-container">
@@ -56,8 +55,9 @@ const GetCategories = () => {
                            
 
                             <Card className="card-style" key={category.id}>
-                                 <Card.Img variant="top" src={category.image}  />
-                                 <Card.Body>
+                                 <Card.Img className="card-image" variant="top" src={category.image}  />
+                                 
+                                 <Card.Body className="card-body">
                                     <Card.Title className="card-title">{category.name}</Card.Title>
                                  </Card.Body>
                             </Card>
