@@ -20,9 +20,8 @@ box-shadow: 1px 1px 6px rgb(52, 43, 43);
 }
 
 /*****************************Body style*****************************/
-.body{
+.body-container{
 width: 400px;
-
 margin-top: 30px;
 }
 
@@ -31,11 +30,10 @@ margin-top: 30px;
     display:flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
 }
 
 .card-style{
-    width: 9rem;
+    width: 40%;
     height:150px;
     margin: 15px;
     border-radius: 50px 50px 20px 20px;
@@ -66,3 +64,4 @@ margin-top: 30px;
    font-weight: bold;
    text-align: center;
 }
+

@@ -45,7 +45,7 @@ const GetCategories = () => {
 
     return (
         <>
-        <Container className="body">
+        <Container className="body-container">
             <Row>
                 <Col>
                 <div className="flex-container">
