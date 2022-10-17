@@ -3,13 +3,15 @@ import { useState, useEffect } from "react";
 import "./ComponentsStyle.css";
 
 import {Container, Row, Col, Card} from "react-bootstrap";
+import {Link} from "react-router-dom";
+
 
 /*
   * A function (component) that representing all Get-opration for Categories.
   * @return components (ReadStudentsData)  which they are called in this component.
   */
 
-const GetCategories = () => {
+const Categories = () => {
 
     /** URL for the port with categories and save it in a varaible  */
     const categories_URL = "http://localhost:5000/categories";
@@ -51,16 +53,18 @@ const GetCategories = () => {
                 <div className="flex-container">
                     {
                         categories.map(category =>(
-
                            
-
-                            <Card className="card-style" key={category.id}>
-                                 <Card.Img className="card-image" variant="top" src={category.image}  />
+                          
+                            <Link  className="category-link" to ={`/ViewProducts/${category.id}`}>
+                             
+                                <Card className="card-style" key={category.id}>
+                                     <Card.Img className="card-image" variant="top" src={category.image}/>
                                  
-                                 <Card.Body className="card-body">
-                                    <Card.Title className="card-title">{category.name}</Card.Title>
-                                 </Card.Body>
-                            </Card>
+                                     <Card.Body className="card-body">
+                                        <Card.Title className="card-title">{category.name}</Card.Title>
+                                     </Card.Body>
+                                </Card>
+                           </Link>
                            
                         )
                         )
@@ -74,4 +78,4 @@ const GetCategories = () => {
         </>    
     )
 }
-export default GetCategories;
+export default Categories;

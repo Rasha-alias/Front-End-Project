@@ -7,8 +7,8 @@ const cors = require("cors");
 const {MongoClient} = require("mongodb");
 const client = new MongoClient("mongodb://localhost:27017");     //MongoDB URL to reach the database 
 const database = client.db("super-saver-db");                    // Database name in MongoDB
-const categoriesCollection = database.collection("categories");  // Collections name in database
-
+const categoriesCollection = database.collection("categories");  // CategoriesnCollection  in database
+const productsCollection = database.collection("products");      // Products Collection in Database
 
 // initialize the express app by invoking express function
 const app = express();
@@ -24,7 +24,18 @@ app.listen(port, () => {
     console.log(`Server started. Listening on port ${port}.`);
 });
 
+// Get the array from Categories
 app.get ("/categories" , async (req, res)=>{
-    let result = await categoriesCollection.find({}).toArray();
-    res.status(200).json(result);
+
+    let categories = await categoriesCollection.find({}).toArray();
+    res.status(200).json(categories);
+
+});
+
+// Get the array from Products
+app.get ("/products" , async (req, res)=>{
+
+    let products = await productsCollection.find({}).toArray();
+    res.status(200).json(products);
+
 });
