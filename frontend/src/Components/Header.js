@@ -2,7 +2,7 @@ import React from "react";
 import "./ComponentsStyle.css";
 import logo from "../Images/logo.png";
 
-import {Container, Navbar }from 'react-bootstrap/';
+import {Container, Navbar, Row, Col }from 'react-bootstrap/';
 
 /**
  * Class representing a Header (Navbar).
@@ -19,9 +19,13 @@ const Header = () => {
 <Navbar collapseOnSelect expand="sm" variant="light" className="navbar-border">
 
 <Container>
-  <Navbar.Brand href="/" className="brand ">  
- <img src={logo} alt = "logo" className="logo-style"/> 
-  </Navbar.Brand>
+   {/* <Row>*/}
+       {/* <Col>*/}
+            <Navbar.Brand href="/" className="brand ">  
+                <img src={logo} alt = "logo" className="logo-style"/> 
+            </Navbar.Brand>
+       {/* </Col>*/}
+   {/* </Row>*/}
 </Container>
 
 </Navbar>

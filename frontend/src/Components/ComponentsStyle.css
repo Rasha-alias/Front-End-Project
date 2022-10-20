@@ -22,11 +22,7 @@
     align-items: center;  
   }
   
-
-
-
-
-
+  
 
 /********************Icons Style**************************/
 .icons-container{
@@ -48,6 +44,7 @@ width: 400px;
     border-radius: 10px;
 box-shadow: 1px 1px 6px rgb(52, 43, 43);
 }
+
 
 /*****************************Body style (Gategories)*****************************/
 .body-container{

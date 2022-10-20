@@ -1,8 +1,6 @@
 import {useParams } from "react-router-dom";
-import { useState, useEffect} from "react";
-import "../Components/ComponentsStyle.css";
-import {Container, Row, Col} from "react-bootstrap";
-
+import { useState, useEffect } from "react";
+import "./Components/ComponentsStyle.css";
 
 const Products = () => {
     const {id} = useParams()
@@ -40,12 +38,7 @@ const Products = () => {
     getProductsData();
     }, []); 
 
-    return ( <>
-    <Container>
-        <Row>
-            <Col>
-            <div>
-                {products && products.map((product) => (
+    return ( <>{products && products.map((product) => (
         <>
         <span>
             <div>{product.name}</div>
@@ -59,11 +52,7 @@ const Products = () => {
             <div>{product.opening_hours} </div>
             </span> <br/>
         </>
-    ))}
-    </div>
-    </Col>
-    </Row>
-    </Container></> );
+    ))}</> );
 }
  
 export default Products;

@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 import "./ComponentsStyle.css";
 
 import {Container, Row, Col, Card} from "react-bootstrap";
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
+import Products from "./Products";
 
 
 /*
@@ -12,7 +13,7 @@ import {Link} from "react-router-dom";
   */
 
 const Categories = () => {
-
+    const {id} = useParams()
     /** URL for the port with categories and save it in a varaible  */
     const categories_URL = "http://localhost:5000/categories";
 
@@ -44,6 +45,14 @@ const Categories = () => {
     }, []);
 
 
+    const [getId, setGetId] = useState(0);
+
+    const getCategoriesId = (objId) =>{
+            setGetId(objId); 
+    }
+    
+
+
 
     return (
         <>
@@ -52,20 +61,20 @@ const Categories = () => {
                 <Col>
                 <div className="flex-container">
                     {
-                        categories.map(category =>(
-                           
-                          
-                            <Link  className="category-link" to ={`/ViewProducts/${category.id}`}>
+                        categories.map(category => (
+                                                      
+                               <Link to ={`/Products/${category._id}`} className="category-link" key={category._id}> 
                              
-                                <Card className="card-style" key={category.id}>
+                                <Card className="card-style" >
                                      <Card.Img className="card-image" variant="top" src={category.image}/>
                                  
                                      <Card.Body className="card-body">
-                                        <Card.Title className="card-title">{category.name}</Card.Title>
+                                        <Card.Title className="card-title">{category.name} </Card.Title>
                                      </Card.Body>
+                               
                                 </Card>
-                           </Link>
-                           
+                              
+                             </Link>                       
                         )
                         )
                     }

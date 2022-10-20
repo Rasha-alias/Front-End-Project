@@ -34,10 +34,7 @@ return (
 
       </Navbar>
 
-      <Routes>
-        <Route path="/" element ={<HomePage/>} />
-      </Routes>
- 
+     
    </div>
  </Router>
 
