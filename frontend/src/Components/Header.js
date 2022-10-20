@@ -12,23 +12,23 @@ import {Container, Navbar, Row, Col }from 'react-bootstrap/';
 
 const Header = () => {
 
-
   return (
+    
     <div>
 
-<Navbar collapseOnSelect expand="sm" variant="light" className="navbar-border">
+      <Navbar collapseOnSelect expand="sm" variant="light" className="navbar-border">
 
-<Container>
-   {/* <Row>*/}
-       {/* <Col>*/}
-            <Navbar.Brand href="/" className="brand ">  
-                <img src={logo} alt = "logo" className="logo-style"/> 
-            </Navbar.Brand>
-       {/* </Col>*/}
-   {/* </Row>*/}
-</Container>
+        <Container>
+          {/* <Row>*/}
+              {/* <Col>*/}
+                    <Navbar.Brand href="/" className="brand ">  
+                        <img src={logo} alt = "logo" className="logo-style"/> 
+                    </Navbar.Brand>
+              {/* </Col>*/}
+          {/* </Row>*/}
+        </Container>
 
-</Navbar>
+      </Navbar>
 
     </div>
   )

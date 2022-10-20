@@ -1,11 +1,14 @@
-import {useParams } from "react-router-dom";
 import { useState, useEffect} from "react";
-import "../Components/ComponentsStyle.css";
+import {useParams } from "react-router-dom";
 import {Container, Row, Col} from "react-bootstrap";
+import "../Components/ComponentsStyle.css";
 
 
 const Products = () => {
+
     const {id} = useParams()
+
+
     /** URL for the port with products and save it in a varaible  */
     const products_URL =`http://localhost:5000/products/${id}`
 
@@ -30,9 +33,6 @@ const Products = () => {
      //update the state by setting products data in products varible 
     setProducts(productsData);  
 
-    // const categoryProducts = productsData.filter(product => product.category === categoryId);
-    //setProducts(categoryProducts);      
-  
     };
 
     /** The functon getProductsData Runs only on the first render */
@@ -40,30 +40,33 @@ const Products = () => {
     getProductsData();
     }, []); 
 
-    return ( <>
-    <Container>
-        <Row>
-            <Col>
-            <div>
-                {products && products.map((product) => (
-        <>
-        <span>
-            <div>{product.name}</div>
-            <div>{product.expiration} </div> 
-            <div>{product.old_price} </div> 
-            <div>{product.price}</div>
-            <div>{product.adress} </div>
-            <div>{product.city} </div> 
-            <div>{product.lat} </div>
-            <div>{product.lng} </div>   
-            <div>{product.opening_hours} </div>
-            </span> <br/>
-        </>
-    ))}
-    </div>
-    </Col>
-    </Row>
-    </Container></> );
+
+    return (
+    <>
+        <Container>
+            <Row>
+                <Col>
+                    <div>
+                        {products && products.map((product) => (
+
+                          <>
+                            <div>{product.name}</div>
+                            <div>{product.expiration} </div> 
+                            <div>{product.old_price} </div> 
+                            <div>{product.price}</div>
+                            <div>{product.adress} </div>
+                            <div>{product.city} </div> 
+                            <div>{product.lat} </div>
+                            <div>{product.lng} </div>   
+                            <div>{product.opening_hours} </div>
+                            <br/>
+                         </>
+                        ))}
+                    </div>
+                </Col>
+            </Row>
+        </Container></>
+     );
 }
  
 export default Products;

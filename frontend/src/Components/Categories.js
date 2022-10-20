@@ -1,11 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from "react";
-import "./ComponentsStyle.css";
-
 import {Container, Row, Col, Card} from "react-bootstrap";
-import {Link, useParams} from "react-router-dom";
-import Products from "./Products";
-
+import {Link,useParams} from "react-router-dom";
+import "./ComponentsStyle.css";
 
 /*
   * A function (component) that representing all Get-opration for Categories.
@@ -42,49 +39,43 @@ const Categories = () => {
     /** The functon getCategoriesData Runs only on the first render */
     useEffect(() => {
     getCategoriesData();
-    }, []);
-
-
-    const [getId, setGetId] = useState(0);
-
-    const getCategoriesId = (objId) =>{
-            setGetId(objId); 
-    }
-    
-
+    }, []);  
 
 
     return (
-        <>
+    <>
         <Container className="body-container">
             <Row>
                 <Col>
-                <div className="flex-container">
-                    {
-                        categories.map(category => (
-                                                      
-                               <Link to ={`/Products/${category._id}`} className="category-link" key={category._id}> 
-                             
+                    <div className="flex-container">
+                        { categories && categories.map((category) => (
+                                                        
+                            <Link to ={`/Products/${category._id}`} className="category-link" key={category._id}> 
+                            
                                 <Card className="card-style" >
-                                     <Card.Img className="card-image" variant="top" src={category.image}/>
-                                 
-                                     <Card.Body className="card-body">
+                                    <Card.Img className="card-image" variant="top" src={category.image}/>
+                                
+                                    <Card.Body className="card-body">
                                         <Card.Title className="card-title">{category.name} </Card.Title>
-                                     </Card.Body>
-                               
+                                    </Card.Body>
+                            
                                 </Card>
-                              
-                             </Link>                       
-                        )
-                        )
-                    }
-                </div>
-
+                                
+                            </Link>                       
+                            ))
+                        }
+                    </div>
                 </Col>
             </Row>
         </Container>
 
-        </>    
+    </>    
     )
 }
 export default Categories;
+
+
+
+
+
+
