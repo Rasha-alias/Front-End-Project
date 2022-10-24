@@ -2,7 +2,7 @@ import React from "react";
 import "./ComponentsStyle.css";
 import logo from "../Images/logo.png";
 
-import {Container, Navbar, Row, Col }from 'react-bootstrap/';
+import {Container, Navbar }from 'react-bootstrap/';
 
 /**
  * Class representing a Header (Navbar).

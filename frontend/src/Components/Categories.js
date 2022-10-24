@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import {Container, Row, Col, Card} from "react-bootstrap";
-import {Link,useParams} from "react-router-dom";
+import {Link} from "react-router-dom";
 import "./ComponentsStyle.css";
 
 /*
@@ -10,7 +10,7 @@ import "./ComponentsStyle.css";
   */
 
 const Categories = () => {
-    const {id} = useParams()
+  
     /** URL for the port with categories and save it in a varaible  */
     const categories_URL = "http://localhost:5000/categories";
 
