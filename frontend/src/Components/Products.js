@@ -7,8 +7,7 @@ import Map from "../Components/Map";
 
 const Products = () => {
 
-    const {id} = useParams()
-
+    const {id} = useParams();
 
     /** URL for the port with products and save it in a varaible  */
     const products_URL =`http://localhost:5000/products/${id}`
@@ -52,50 +51,62 @@ const Products = () => {
   //  const handelClose = () => setShow(false);
     
     const [productData, setProductData] = useState("rasha");
-    //const [productLat, setProductLat] = useState(null);
-    //const [productLng, setProductLng] = useState(null);
-
-
+  
 
     return (
     <>
-        <Container>
+        <Container className="body-container">
             <Row>
                 <Col>
                     <div>
+
                         {products && products.map((product) => (
 
-                          <>
-                          <div style={{width:"400px"}} key={product._id} >
-                            <div>{product.name}</div>
-                            <div>{product.expiration} </div> 
-                            <div>{product.old_price} </div> 
-                            <div>{product.price}</div>
-                            <div><Button onClick={()=> {
-                                 setProductData(product);
-                                // setProductLat(parseFloat(product.lat));
-                                // setProductLng(parseFloat(product.lng));
-                                 setShow(true);
-                                 } }
-                                  className="btn btn-success" 
-                                  data-toggle="modal"> 
-                                  <span>{product.adress} </span>
-                                  </Button>
-                                  </div> 
-                            
-                            <br/>
+                            <div key={product._id} className="products-container"  > {/**link to the shop */}
+                           
+                                <div className="left-box">
+
+                                    <div> <img src={product.image} className="product-image" alt="" /> </div>
+                                    <div className="product-name">{product.name}</div>
+                                    <div className="product-expiration">Utgångsdatum: {product.expiration}</div> 
+                                    <div className="product-price"> <span className="product-old-price">{product.old_price}</span> <span className="product-new-price">{product.price} Kr</span></div>
+
+                                </div>
+
+                                <div className="right-box">
+
+                                    <div>  <img src={product.icon} className="product-icon" alt=""/> </div>
+
+                                    <div className="product-adress" >
+                                        
+                                        <button onClick={()=> {
+                                                                setProductData(product);
+                                                                setShow(true);
+                                                                }}
+
+                                                data-toggle="modal" > 
+
+                                            <div> {product.adress} </div> 
+
+                                        </button>
+
+                                    </div> 
+
+                                    <div className="product-city">  {product.city}  </div>   
+
+                                </div>
+
                             </div>
-                            <br/>
-                        
-                         </>
+
                         ))}
                     </div>
                 </Col>
             </Row>
         </Container>
+                        
 
 
-        <Modal show={show} onHide={()=>setShow(false)}  size="lg" aria-labelledby="contained-modal-title-vcenter" >
+        <Modal show={show} onHide={()=>setShow(false)}  className="modal-style">
             
             <Modal.Header  closeButton>
                 <Modal.Title>
@@ -107,12 +118,9 @@ const Products = () => {
             <Modal.Body>
                 <Container>
                     <Row>
-                        
                         <Col xs={12} md={12}>
 
-                            < Map 
-                            city={productData.city}
-                            adress={productData.adress}
+                            <Map 
                             latitude={productData.lat}
                             longitude={productData.lng}      
                             />
@@ -123,18 +131,17 @@ const Products = () => {
             </Modal.Body>
 
 
-            <Modal.Footer className="justify-content-between">  
-            {productData.name}
+            <Modal.Footer className="modal-footer"> 
+
+           <div className="shop-name-adress"> {productData.shop_name} {productData.adress}</div>
+           <div> Öppet Idag:  <span>{productData.opening_hours}</span>  </div> 
+           <div>{productData.adress}, {productData.city}</div>  
 
             <Button variant="secondary" onClick={()=>setShow(false)} style={{marginLeft:"auto"}} >Stäng </Button>
 
             </Modal.Footer>
                                         
         </Modal>
-
-
-
-
             
     </>
      );

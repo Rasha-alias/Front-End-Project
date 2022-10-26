@@ -99,4 +99,127 @@
    font-weight: bold;
    text-align: center;
 }
+/*******************************Products Style*********************************/
 
+.products-container{
+    width: 100%;
+    height:160px;
+    display:flex;
+    flex-wrap: row;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 5px  rgb(52, 43, 43);
+}
+
+.products-container:hover{
+    box-shadow: 2px 2px 8px 1px rgb(71, 84, 82);
+}
+
+.left-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex:50%;   
+}
+
+        .product-image{
+            height: 70px;
+            width: 150px;
+        }
+
+        .product-name{
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .product-expiration{
+            font-size: 14px;
+            font-weight: 500;
+            color:rgb(184, 98, 141);
+        }
+
+        .product-price{
+            display:flex;
+            justify-content: space-between;
+        }
+
+                .product-old-price{
+                    font-size: 15px;
+                    color: dimgrey;
+                    text-decoration: line-through;
+                    margin-right: 10px;
+                }
+                
+                .product-new-price{
+                    font-weight: bold;
+                    font-size: 15px;
+                }
+
+
+
+
+.right-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex:50%;
+}
+
+        .product-icon{
+            height: 70px;
+            width: 120px;
+            margin-bottom: 10px;
+        }
+
+        .product-adress{
+            background-color:white;
+            color:blue;
+            border: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        .product-city{
+            margin-top: 10px;;
+        }
+
+/*******************************************Modal-style*************************************/
+
+.modal-style{
+    max-width: 400px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.modal-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+        .shop-name-adress{
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .modal-footer > div {
+            font-size: 19px;
+        }
+
+        .modal-footer > div > span{
+            margin-left: 10px;
+            font-weight: 500;
+            color: rgb(29, 71, 29);
+        }
+
+/***********************************************Map-Style****************************************/
+.map-style{
+    width: 326px;
+    height: 500px;
+}
