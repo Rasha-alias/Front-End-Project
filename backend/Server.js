@@ -27,7 +27,8 @@ app.listen(port, () => {
     console.log(`Server started. Listening on port ${port}.`);
 });
 
-// Get the array from Categories
+
+// Get the array of data from Categories collection
 app.get ("/categories" , async (req, res)=>{
 
     let categories = await categoriesCollection.find({}).toArray();
@@ -35,7 +36,7 @@ app.get ("/categories" , async (req, res)=>{
 
 });
 
-// Get the array from Products
+// Get the array of data from Products collection with (Category's Id) which is name (category) In MongoDB
 app.get ("/products/:category" , async (req, res)=>{
 
 console.log(req.params.category);
@@ -45,3 +46,58 @@ console.log(req.params.category);
     res.status(200).json(products);
 
 });
+
+
+////////////////////////////
+app.get ("/products" , async (req, res)=>{
+
+    console.log(req.params.category);
+    
+        let products = await productsCollection.find().toArray();
+    
+        res.status(200).json(products);
+    
+    });
+
+
+//Passing the value from search input with path to get the result of (name, shop_name, city) from productsCollection 
+app.get ("/SearchResult/:value", async (req, res)=>{
+       
+        let value = req.params.value;
+       
+        value = value.replace(value[0], value[0].toUpperCase());
+        shopNameValue = value.replace(value,value.toUpperCase());
+
+        console.log(value);
+      
+        // let products = await productsCollection.find({ "name": value}).toArray();   //let products = await productsCollection.find({name:  new RegExp(value,'i')}).toArray();
+
+        let products = await productsCollection.find({$or: [
+            
+            {"name": {$in: [ new RegExp(value,'i')] }},
+            {"city": {$in: [value] }},
+            {"shop_name": {$in: [shopNameValue] }}            
+
+         ]} ).toArray();
+
+        console.log(products);
+        
+        res.status(200).json(products);
+        
+        });    
+
+
+
+
+       app.get ("/WrongInput/:value", async (req, res)=>{
+
+    
+        
+
+            res.status(200).json('there is no product');
+        
+        });  
+
+
+
+     

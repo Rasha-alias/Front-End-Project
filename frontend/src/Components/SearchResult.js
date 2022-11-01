@@ -1,19 +1,18 @@
+import React from 'react'
 import { useState, useEffect} from "react";
 import {useParams } from "react-router-dom";
-import {Container, Row, Col, Modal, Button} from "react-bootstrap";
+import {Container, Row, Col, Modal, Button, Link} from "react-bootstrap";
 import "../Components/ComponentsStyle.css";
 import Map from "../Components/Map";
-import {MdOutlineArrowForwardIos} from "react-icons/md";
 
 
 
+const SearchResult = () => {
 
-const Products = () => {
-
-    const {id} = useParams();
+    const {value} = useParams();
 
     /** URL for the port with products and save it in a varaible  */
-    const products_URL =`http://localhost:5000/products/${id}`
+    const products_URL =`http://localhost:5000/SearchResult/${value}`
 
     /** set Varible (products) the initial state to an empty array */
     const [products, setProducts] = useState([]);
@@ -41,31 +40,52 @@ const Products = () => {
     /** The functon getProductsData Runs only on the first render */
     useEffect(() => {
     getProductsData();
-    }, []); 
+    }, [value]); 
 
 
+
+
+
+
+    const [wrongInput, setWrongInput] = useState(" ");
+  
+    const getWrongData = async () => {
+  
+        const response = await fetch(`http://localhost:5000/WrongInput/${value}`);
+        const wrongData = await response.json();
+  
+     //update the state by setting products data in products varible 
+   
+        setWrongInput(wrongData);  
+        };
+    
+        useEffect(() => {
+            getWrongData();
+            }, []); 
+  
+
+
+
+            
+   
     /** set Varible (show) the initial state to false value */
     const [show, setShow] = useState(false); 
-
-    /**A function that update show state by setting true value in show state by function setShow */
-   // const handelShow = () => setShow(true);
-
-    /**A function that update show state by setting false value in show state by function setShow */
-  //  const handelClose = () => setShow(false);
     
     const [productData, setProductData] = useState("rasha");
 
-
-
+    
     return (
     <>
-
-        <Container className="body-container">
+    
+    <Container className="body-container">
             <Row>
                 <Col>
                     <div>
 
-                        {products && products.map((product) => (
+                    {
+                      products && products  //.filter((product)=>product.name.toLowerCase().includes(value))
+                        .map((product) => (
+                           
 
                             <div key={product._id} className="products-container"  > {/**link to the shop */}
                            
@@ -101,24 +121,18 @@ const Products = () => {
 
                                 </div>
 
-                               
-                                 <div className="link-box">
-                                 <a href={product.link_to_shop}>
-                                <MdOutlineArrowForwardIos/>
-                                </a>
-                                </div>
-                            
+                            </div>                   
 
-                            </div>
-                          
+                ))}
 
-                        ))}
+               
                     </div>
+
                 </Col>
             </Row>
         </Container>
-                        
 
+                        
 
         <Modal show={show} onHide={()=>setShow(false)}  className="modal-style">
             
@@ -156,9 +170,10 @@ const Products = () => {
             </Modal.Footer>
                                         
         </Modal>
-            
-    </>
-     );
+
+
+    
+    </> 
+   )
 }
- 
-export default Products;
+export default SearchResult

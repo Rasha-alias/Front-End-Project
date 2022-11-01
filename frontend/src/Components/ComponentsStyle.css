@@ -126,7 +126,7 @@
 
         .product-image{
             height: 70px;
-            width: 120px;
+            width: 12git0px;
         }
 
         .product-name{
@@ -186,6 +186,13 @@
             margin-top: 10px;;
         }
 
+
+.link-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
 /*******************************************Modal-style*************************************/
 
 .modal-style{
@@ -222,4 +229,10 @@
 .map-style{
     width: 326px;
     height: 500px;
+}
+
+/**********************************************SearchBar style***********************************/
+
+.search-bar{
+    margin-top: 30px;
 }
