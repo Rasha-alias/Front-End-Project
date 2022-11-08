@@ -6,11 +6,9 @@ import Categories from "./Components/Categories";
 import Products from './Components/Products';
 import SearchBar from './Components/SearchBar';
 import SearchResult from './Components/SearchResult';
-import WrongInput from './Components/WrongInput';
-//import Products from './Products2';
 
 
-const App =()=>{
+const App = () => {
   return (
     <div className="App">
       <Header/>
@@ -24,12 +22,7 @@ const App =()=>{
             <Route path="Products/:id" element = {<Products/>} />
 
             <Route path="SearchResult/:value" element = {<SearchResult/>} />
-
-            <Route path="WrongInput/:value" element = {<WrongInput/>} />
-
-
-         {/*<Route path="/Products2/:id" element = {<Products/>} />*/}
-            
+          
       </Routes>
 
     </div>

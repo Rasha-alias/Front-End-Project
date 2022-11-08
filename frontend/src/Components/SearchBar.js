@@ -10,6 +10,7 @@ import {Link} from "react-router-dom";
 const SearchBar = () => {
 
     const [userInput, setUserInput] = useState(" ");
+ 
 
   return (
   <>
@@ -19,7 +20,7 @@ const SearchBar = () => {
             <Col xs={2} sm={1}></Col>
             <Col xs={8} sm={10}>
 
-                <InputGroup className="search-bar ">
+                <InputGroup className="search-bar">
 
                     <FormControl
                         name="userInput"    
@@ -28,14 +29,11 @@ const SearchBar = () => {
                         placeholder="Sök för Produkt, affär, Stad" 
                         required
                     />
+                  
                     
-
-                  <Link to={`/SearchResult/${userInput}`}> 
-                    <Button variant="primary" id="button-addon2">
-                        <ImSearch/>
-                    </Button>
-                    </Link>
-              
+                    <Button variant="light" id="button-addon2"  aria-label='sök'>
+                    <Link to={`/SearchResult/${userInput}`} > <ImSearch/> </Link>
+                    </Button>            
                         
                 </InputGroup> 
 

@@ -1,10 +1,11 @@
 import React from 'react'
 import { useState, useEffect} from "react";
 import {useParams } from "react-router-dom";
-import {Container, Row, Col, Modal, Button, Link} from "react-bootstrap";
+import {Container, Row, Col, Modal, Button} from "react-bootstrap";
 import "../Components/ComponentsStyle.css";
 import Map from "../Components/Map";
-
+import WrongInput from "../Components/WrongInput";
+import {MdOutlineArrowForwardIos} from "react-icons/md";
 
 
 const SearchResult = () => {
@@ -41,39 +42,78 @@ const SearchResult = () => {
     useEffect(() => {
     getProductsData();
     }, [value]); 
-
-
-
-
-
-
-    const [wrongInput, setWrongInput] = useState(" ");
-  
-    const getWrongData = async () => {
-  
-        const response = await fetch(`http://localhost:5000/WrongInput/${value}`);
-        const wrongData = await response.json();
-  
-     //update the state by setting products data in products varible 
-   
-        setWrongInput(wrongData);  
-        };
-    
-        useEffect(() => {
-            getWrongData();
-            }, []); 
-  
-
-
-
-            
+           
    
     /** set Varible (show) the initial state to false value */
     const [show, setShow] = useState(false); 
     
     const [productData, setProductData] = useState("rasha");
 
-    
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  var  productsArray = products && products  //.filter((product)=>product.name.toLowerCase().includes(value))
+    .map((product) => (
+       
+
+        <div key={product._id} className="products-container"  > {/**link to the shop */}
+       
+            <div className="left-box">
+
+                <div> <img src={product.image} className="product-image" alt="" /> </div>
+                <div className="product-name">{product.name}</div>
+                <div className="product-expiration">Utgångsdatum: {product.expiration}</div> 
+                <div className="product-price"> <span className="product-old-price">{product.old_price}</span> <span className="product-new-price">{product.price} Kr</span></div>
+
+            </div>
+
+            <div className="right-box">
+
+                <div>  <img src={product.icon} className="product-icon" alt=""/> </div>
+
+                <div className="product-adress" >
+                    
+                    <button onClick={()=> {
+                                            setProductData(product);
+                                            setShow(true);
+                                            }}
+
+                            data-toggle="modal" > 
+
+                        <div> {product.adress} </div> 
+
+                    </button>
+
+                </div> 
+
+                <div className="product-city">  {product.city}  </div>   
+
+            </div>
+
+            <div className="link-box">
+
+             {/** Link to shop name */}
+              {/* <a href={product.link_to_shop}>   <MdOutlineArrowForwardIos/> </a>*/}
+
+                {/**button that open a new window for the Shop page link */}
+                <Button className="link-button"  
+                        onClick={()=> window.open (
+                                                    `${product.link_to_shop}`,
+                                                    "ShopLinkWindow",
+                                                    "height=932 , width=430"
+                                                  )  
+                                }
+                > 
+                                        
+                                     <MdOutlineArrowForwardIos /> 
+                                     </Button>
+            </div>
+
+        </div>                   
+
+))
+
+
     return (
     <>
     
@@ -81,51 +121,9 @@ const SearchResult = () => {
             <Row>
                 <Col>
                     <div>
-
-                    {
-                      products && products  //.filter((product)=>product.name.toLowerCase().includes(value))
-                        .map((product) => (
-                           
-
-                            <div key={product._id} className="products-container"  > {/**link to the shop */}
-                           
-                                <div className="left-box">
-
-                                    <div> <img src={product.image} className="product-image" alt="" /> </div>
-                                    <div className="product-name">{product.name}</div>
-                                    <div className="product-expiration">Utgångsdatum: {product.expiration}</div> 
-                                    <div className="product-price"> <span className="product-old-price">{product.old_price}</span> <span className="product-new-price">{product.price} Kr</span></div>
-
-                                </div>
-
-                                <div className="right-box">
-
-                                    <div>  <img src={product.icon} className="product-icon" alt=""/> </div>
-
-                                    <div className="product-adress" >
-                                        
-                                        <button onClick={()=> {
-                                                                setProductData(product);
-                                                                setShow(true);
-                                                                }}
-
-                                                data-toggle="modal" > 
-
-                                            <div> {product.adress} </div> 
-
-                                        </button>
-
-                                    </div> 
-
-                                    <div className="product-city">  {product.city}  </div>   
-
-                                </div>
-
-                            </div>                   
-
-                ))}
-
-               
+                       
+                       { productsArray.length ? productsArray: <WrongInput/> }
+                   
                     </div>
 
                 </Col>

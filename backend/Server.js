@@ -69,8 +69,6 @@ app.get ("/SearchResult/:value", async (req, res)=>{
         shopNameValue = value.replace(value,value.toUpperCase());
 
         console.log(value);
-      
-        // let products = await productsCollection.find({ "name": value}).toArray();   //let products = await productsCollection.find({name:  new RegExp(value,'i')}).toArray();
 
         let products = await productsCollection.find({$or: [
             
@@ -86,18 +84,7 @@ app.get ("/SearchResult/:value", async (req, res)=>{
         
         });    
 
-
-
-
-       app.get ("/WrongInput/:value", async (req, res)=>{
-
-    
-        
-
-            res.status(200).json('there is no product');
-        
-        });  
-
-
-
+       
      
+    
+ 

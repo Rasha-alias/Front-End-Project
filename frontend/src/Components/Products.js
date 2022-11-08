@@ -1,11 +1,10 @@
 import { useState, useEffect} from "react";
 import {useParams } from "react-router-dom";
 import {Container, Row, Col, Modal, Button} from "react-bootstrap";
+import {Link} from "react-router-dom";
 import "../Components/ComponentsStyle.css";
 import Map from "../Components/Map";
 import {MdOutlineArrowForwardIos} from "react-icons/md";
-
-
 
 
 const Products = () => {
@@ -56,7 +55,6 @@ const Products = () => {
     const [productData, setProductData] = useState("rasha");
 
 
-
     return (
     <>
 
@@ -67,7 +65,7 @@ const Products = () => {
 
                         {products && products.map((product) => (
 
-                            <div key={product._id} className="products-container"  > {/**link to the shop */}
+                            <div key={product._id} className="products-container"> 
                            
                                 <div className="left-box">
 
@@ -101,16 +99,32 @@ const Products = () => {
 
                                 </div>
 
-                               
+                             
                                  <div className="link-box">
-                                 <a href={product.link_to_shop}>
-                                <MdOutlineArrowForwardIos/>
-                                </a>
+
+                                 {/** Link to shop name */}
+                                 {/* <a href={product.link_to_shop}>   <MdOutlineArrowForwardIos/> </a>*/}
+
+                                 {/**button that open a new window for the Shop page link */}
+                                     <Button  className="link-button"  
+                                              onClick={()=>
+
+                                                        window.open
+                                                                    (
+
+                                                                    `${product.link_to_shop}`,
+                                                                    "ShopLinkWindow",
+                                                                    "height=932 , width=430"
+                                                                    )  
+                                                       }
+                                    > 
+                                        
+                                     <MdOutlineArrowForwardIos />
+                                     </Button>
+
                                 </div>
-                            
 
                             </div>
-                          
 
                         ))}
                     </div>
