@@ -5,7 +5,10 @@ import {Container, Row, Col, Modal, Button} from "react-bootstrap";
 import "../Components/ComponentsStyle.css";
 import Map from "../Components/Map";
 import WrongInput from "../Components/WrongInput";
+import Picture2 from "../Images/Picture2.png";
+import Picture1 from "../Images/Picture1.png";
 import {MdOutlineArrowForwardIos} from "react-icons/md";
+
 
 
 const SearchResult = () => {
@@ -126,6 +129,12 @@ const SearchResult = () => {
                    
                     </div>
 
+                </Col>
+            </Row>
+            
+            <Row>
+                <Col>
+                    <img src={Picture1} alt = "Rädda mat, Om miljö " className="image-style"/>
                 </Col>
             </Row>
         </Container>

@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import {Container, Row, Col, Card} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import "./ComponentsStyle.css";
+import Video from "../Components/Video"
+
 
 /*
   * A function (component) that representing all Get-opration for Categories.
@@ -65,6 +67,14 @@ const Categories = () => {
                             ))
                         }
                     </div>
+                </Col>
+            </Row>
+
+            <Row>
+                <Col >
+               <div className="video-position">
+                <Video/>
+                </div>
                 </Col>
             </Row>
         </Container>
