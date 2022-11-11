@@ -1,9 +1,11 @@
 import React from 'react'
 import { useState, useEffect } from "react";
-import {Container, Row, Col, Card} from "react-bootstrap";
+import {Container, Row, Col, Card, Button} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import "./ComponentsStyle.css";
 import Video from "../Components/Video"
+import Icons from "../Components/Icons";
+import SearchBar from '../Components/SearchBar';
 
 
 /*
@@ -46,6 +48,9 @@ const Categories = () => {
 
     return (
     <>
+        <Icons/>
+        <SearchBar/>
+
         <Container className="body-container">
             <Row>
                 <Col>
@@ -73,8 +78,18 @@ const Categories = () => {
             <Row>
                 <Col >
                <div className="video-position">
-                <Video/>
+                   <Video/>
                 </div>
+                </Col>
+            </Row>
+
+            <Row>
+                <Col>
+                    <div className="button-position">
+                        <Button aria-label='Om Oss' className="om-oss-button">
+                            <Link to ={"/AboutUs"}> <div className="om-oss-button"> Läs om Super Saver</div> </Link>
+                        </Button>
+                    </div>
                 </Col>
             </Row>
         </Container>

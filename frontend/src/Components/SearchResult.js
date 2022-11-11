@@ -6,8 +6,9 @@ import "../Components/ComponentsStyle.css";
 import Map from "../Components/Map";
 import WrongInput from "../Components/WrongInput";
 import Picture2 from "../Images/Picture2.png";
-import Picture1 from "../Images/Picture1.png";
 import {MdOutlineArrowForwardIos} from "react-icons/md";
+import Icons from "../Components/Icons";
+import SearchBar from '../Components/SearchBar';
 
 
 
@@ -119,64 +120,66 @@ const SearchResult = () => {
 
     return (
     <>
+        <Icons/>
+        <SearchBar/>
     
-    <Container className="body-container">
-            <Row>
-                <Col>
-                    <div>
-                       
-                       { productsArray.length ? productsArray: <WrongInput/> }
-                   
-                    </div>
-
-                </Col>
-            </Row>
-            
-            <Row>
-                <Col>
-                    <img src={Picture1} alt = "Rädda mat, Om miljö " className="image-style"/>
-                </Col>
-            </Row>
-        </Container>
-
+        <Container className="body-container">
+                <Row>
+                    <Col>
+                        <div>
+                            
+                            { productsArray.length ? productsArray: <WrongInput/> }
                         
+                        </div>
 
-        <Modal show={show} onHide={()=>setShow(false)}  className="modal-style">
+                    </Col>
+                </Row>
+                
+                <Row>
+                    <Col>
+                        <img src={Picture2} alt = "Rädda mat, Om miljö " className="image-style" style={{opacity:"0.9"}}/>
+                    </Col>
+                </Row>
+            </Container>
+
+                            
+
+            <Modal show={show} onHide={()=>setShow(false)}  className="modal-style">
+                
+                <Modal.Header  closeButton>
+                    <Modal.Title>
+                        Location
+                    </Modal.Title>
+                </Modal.Header>
+
             
-            <Modal.Header  closeButton>
-                <Modal.Title>
-                    Location
-                </Modal.Title>
-            </Modal.Header>
+                <Modal.Body>
+                    <Container>
+                        <Row>
+                            <Col xs={12} md={12}>
 
-        
-            <Modal.Body>
-                <Container>
-                    <Row>
-                        <Col xs={12} md={12}>
+                                <Map 
+                                latitude={productData.lat}
+                                longitude={productData.lng}      
+                                />
 
-                            <Map 
-                            latitude={productData.lat}
-                            longitude={productData.lng}      
-                            />
-
-                        </Col>
-                    </Row>
-                </Container>                   
-            </Modal.Body>
+                            </Col>
+                        </Row>
+                    </Container>                   
+                </Modal.Body>
 
 
-            <Modal.Footer className="modal-footer"> 
+                <Modal.Footer className="modal-footer"> 
 
-           <div className="shop-name-adress"> {productData.shop_name} {productData.adress}</div>
-           <div> Öppet Idag:  <span>{productData.opening_hours}</span>  </div> 
-           <div>{productData.adress}, {productData.city}</div>  
+                <div className="shop-name-adress"> {productData.shop_name} {productData.adress}</div>
+                <div> Öppet Idag:  <span>{productData.opening_hours}</span>  </div> 
+                <div>{productData.adress}, {productData.city}</div>  
 
-            <Button variant="secondary" onClick={()=>setShow(false)} style={{marginLeft:"auto"}} >Stäng </Button>
+                <Button variant="secondary" onClick={()=>setShow(false)} style={{marginLeft:"auto"}} >Stäng </Button>
 
-            </Modal.Footer>
-                                        
-        </Modal>
+                </Modal.Footer>
+                                            
+            </Modal>
 
 
     

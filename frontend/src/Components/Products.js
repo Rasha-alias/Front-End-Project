@@ -4,9 +4,9 @@ import {Container, Row, Col, Modal, Button} from "react-bootstrap";
 import Map from "../Components/Map";
 import "../Components/ComponentsStyle.css";
 import {MdOutlineArrowForwardIos} from "react-icons/md";
-
-import Picture1 from "../Images/Picture1.png";
 import Carosel from "./Carosel"
+import Icons from "../Components/Icons";
+import SearchBar from '../Components/SearchBar';
 
 
 
@@ -60,6 +60,8 @@ const Products = () => {
 
     return (
     <>
+        <Icons/>
+        <SearchBar/>
 
         <Container className="body-container">
             <Row>

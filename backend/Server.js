@@ -84,7 +84,5 @@ app.get ("/SearchResult/:value", async (req, res)=>{
         
         });    
 
-       
-     
     
  

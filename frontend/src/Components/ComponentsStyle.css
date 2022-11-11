@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,600&family=Merienda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,600&family=Merienda&family=Noto+Serif+Ethiopic&display=swap');
 
-/***************************Header style*************************************/
+
+
+/*******************************Header style*************************************/
 
  .navbar-border{
     background-image: radial-gradient(circle, rgba(190, 223, 193, 0) 3%,rgba(190, 223, 193,100) );
@@ -25,7 +30,7 @@
   }
 
   
-/********************Icons Style**************************/
+/****************************Icons Style****************************/
 
 .icons-container{
     display:flex;
@@ -60,6 +65,7 @@
     display:flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-bottom: 15px;
 }
 
 .category-link{
@@ -101,6 +107,25 @@
    font-weight: bold;
    text-align: center;
 }
+
+.button-position{
+display: flex;
+justify-content: center;
+}
+
+.om-oss-button{
+ color:#194540;
+ background-color: #EAF4ED;
+ border: 0px;
+ text-decoration: underline;
+ margin-bottom: 15px;
+ font-size: 25px;
+ font-weight: 500;
+ font-family: 'Fraunces', serif;
+ font-family: 'Merienda', cursive;
+ font-family: 'Noto Serif Ethiopic', serif;
+}
+
 /*******************************Products Style*********************************/
 
 .products-container{
@@ -209,11 +234,11 @@
     height: 200px;
     width:376px;
     margin-top: 5px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     border-radius: 10px;
-    opacity: 0.9;
+    opacity: 1;
 }
-/*******************************************Modal-style*************************************/
+/*************************************Modal-style*************************************/
 
 .modal-style{
     max-width: 400px;
@@ -245,19 +270,19 @@
             color: rgb(29, 71, 29);
         }
 
-/***********************************************Map-Style****************************************/
+/*********************************Map-Style****************************************/
 .map-style{
     width: 326px;
     height: 500px;
 }
 
-/**********************************************SearchBar style***********************************/
+/*********************************SearchBar style***********************************/
 
 .search-bar{
     margin-top: 30px;
 }
 
-/***********************************************wrongInput***************************************/
+/********************************WrongInput Style***************************************/
 
 .wrong-word-message{
     font-size: 25px;
@@ -271,13 +296,13 @@
     text-align: center;
 }
 
-/*******************************ShopLinkWindow******************************/
+/*******************************ShopLinkWindow*********************************/
 .shop-link-window{
     height: 930px;
     width:430px;
 }
 
-/********************************Carosel Style*****************************/
+/*******************************Carosel Style**********************************/
 
 .carosel-style{
     margin-top: 12px;
@@ -289,16 +314,64 @@
     border-radius: 20px;
 }
 
-/**************************vedio**************/
+/********************************************Video Style*************************/
 .video{
 height:230px ;
-width:330px ;
+width:350px ;
 border: 3px solid rgb(47, 47, 47);
 }
 
-.video-position{
+ /** this div is located in Categories file **/
+.video-position{ 
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+}
+
+/************************************About Us Style****************************/
+
+.about-us{
+    margin:30px;
+    width:370px;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Fraunces', serif;
+    font-family: 'Merienda', cursive;
+    font-family: 'Noto Serif Ethiopic', serif;
+    font-weight:600;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.about-us-header{
+    display: flex;
+    width:400px;
+    justify-content:space-between;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.paragraph{
+    margin-bottom: 35px;
+}
+
+.header-text{
+    color: #194540;
+    font-size:25px ;
+    font-weight:bold;
+    font-family: 'Fraunces', serif;
+    font-family: 'Merienda', cursive;
+    padding-top: 30px;
+}
+
+.header-text > sup{
+    font-size:35px;
+    margin-right:10px;
+}
+
+.tree-image-style{
+    height: 80px;
+    width: 110px;
 }
