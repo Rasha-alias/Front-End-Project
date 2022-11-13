@@ -2,4 +2,76 @@
   width:430px;
 }
 
+/********************************************/
+@media only screen and (max-width: 428px) {
 
+  .App{
+      width:428px;
+  }
+}
+
+
+/*********************************************/
+@media only screen and (max-width: 414px) {
+
+  .App{
+      width:414px;
+  }
+}
+
+
+/*********************************************/
+@media only screen and (max-width: 412px) {
+
+  .App{
+      width:412px;
+  }
+}
+
+/*********************************************/
+@media only screen and (max-width: 393px) {
+
+  .App{
+      width:393px;
+  }
+}
+
+/*********************************************/
+@media only screen and (max-width: 390px) {
+
+  .App{
+      width:390px;
+  }
+}
+
+/*********************************************/
+@media only screen and (max-width: 375px) {
+
+  .App{
+      width:375px;
+  }
+}
+
+/*********************************************/
+@media only screen and (max-width: 360px) {
+
+  .App{
+      width:360px;
+  }
+}
+
+/*********************************************/
+@media only screen and (max-width: 320px) {
+
+  .App{
+      width:320px;
+  }
+}
+
+/*********************************************/
+@media only screen and (max-width: 280px) {
+
+  .App{
+      width:280px;
+  }
+}

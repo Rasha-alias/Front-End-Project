@@ -1,7 +1,6 @@
 import React from "react";
 import "./ComponentsStyle.css";
 import logo from "../Images/logo.png";
-
 import {Container, Navbar }from 'react-bootstrap/';
 
 /**
@@ -18,14 +17,12 @@ const Header = () => {
 
       <Navbar collapseOnSelect expand="sm" variant="light" className="navbar-border">
 
-        <Container>
-          {/* <Row>*/}
-              {/* <Col>*/}
+        <Container className="navbar-container">
+          
                     <Navbar.Brand href="/" className="brand ">  
                         <img src={logo} alt = "logo" className="logo-style"/> 
                     </Navbar.Brand>
-              {/* </Col>*/}
-          {/* </Row>*/}
+            
         </Container>
 
       </Navbar>

@@ -1,10 +1,10 @@
 import React from 'react'
 import './ComponentsStyle.css'
-
 import ica from "../Images/ica.png";
 import coop from "../Images/coop.png";
 import willys from "../Images/willys.png";
 import lidel from "../Images/lidel.png";
+
 
 const Icons = () => {
     
