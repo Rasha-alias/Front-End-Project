@@ -121,6 +121,7 @@
    text-align: center;
 }
 
+/**button in categories page links to About page**/
 .button-position{
 display: flex;
 justify-content: center;
@@ -386,7 +387,9 @@ border: 360 solid rgb(47, 47, 47);
 
 
 
-/**************************Responsive************************************/
+             /**************************Responsive for mobile devices****************************/
+
+/**********Responsive for mobile which have width 428 such as iphone 14 plus, iphone 13 pro max*********/
 @media only screen and (max-width: 428px) {
 
     .navbar-border{
@@ -411,7 +414,7 @@ border: 360 solid rgb(47, 47, 47);
      
 }
 
-/*****************************************************/
+/**********Responsive for mobile which have width 414 such as iphone 6/7/8 plus, iphone XR *********/
 @media only screen and (max-width: 414px) {
 
     .navbar-border{
@@ -433,11 +436,16 @@ border: 360 solid rgb(47, 47, 47);
     .search-bar-position{
         margin-left: 7px;
      }
-    
+
+     .body-container{
+       margin-left: 7px;
+       margin-right:7px;
+       padding:0;
+     } 
     
 }
 
-/***********************************************************/
+/**********Responsive for mobile which have width 412 such as Samsung Galaxy A5, Galaxy S20 ultra*********/
 @media only screen and (max-width: 412px) {
 
     .navbar-border{
@@ -459,10 +467,16 @@ border: 360 solid rgb(47, 47, 47);
     .search-bar-position{
         margin-left: 6px;
      }
+
+     .body-container{
+        margin-left: 6px;
+        margin-right:6px;
+        padding:0;
+      } 
     
 }
 
-/***********************************************************/
+/**********Responsive for mobile which have width 393 such as iphone 14 pro, Pixel 5 *********/
 @media only screen and (max-width: 393px) {
 
     .navbar-border{
@@ -489,11 +503,34 @@ border: 360 solid rgb(47, 47, 47);
 
     .search-bar-position{
         width:380px;    
+     }  
+
+     .body-container{
+        width: 380px;
      }
+     
+     .card-style{
+         width: 140px;
+         height:140px;
+         margin: 10px;
+     }
+
+     .card-image{
+        width:95px;
+        height:75px;
+    }
+    
+    .card-body{
+        height:45px;
+    }
+    
+    .card-title{
+       font-size: 13px;
+    }    
     
 }
 
-/***********************************************************/
+/**********Responsive for mobile which have width 390 such as iphone 14, 13, 13 Pro, 12 Pro *********/
 @media only screen and (max-width: 390px) {
 
     .navbar-border{
@@ -517,10 +554,31 @@ border: 360 solid rgb(47, 47, 47);
         width: 70px;
         height: 45px;
     }
+
+    .body-container{
+        width: 380px;
+        margin-left: 5px;
+        margin-right:5px;
+     }
+     
+     .card-style{
+         width: 135px;
+         height:135px;
+         margin: 12px 5px 12px 5px;
+     }
+
+     .card-image{
+        width:80px;
+        height:70px;
+    }
     
+    .card-body{
+        height:45px;
+    }
+      
 }
 
-/***********************************************************/
+/**********Responsive for mobile which have width 375 such as iphone 13 mini, iphone 6/7/8 *********/
 @media only screen and (max-width: 375px) {
 
     .navbar-border{
@@ -557,9 +615,34 @@ border: 360 solid rgb(47, 47, 47);
     .search-bar{
         margin-top: 10px;
     }
+
+    .body-container{
+        width: 375px;
+        margin-left: 0;
+        margin-right:0;
+     }
+     
+     .card-style{
+         width: 130px;
+         height:130px;
+         margin: 12px 5px 12px 5px;
+     }
+
+     .card-image{
+        width:80px;
+        height:70px;
+    }
+    
+    .card-body{
+        height:40px;
+    }
+
+    .card-title{
+        font-size: 12px;
+     }    
 }
 
-/***********************************************************/
+/***Responsive for mobile which have width 360 like Andriod large and small such as(Galaxy S5,S8) ***/
 @media only screen and (max-width: 360px) {
 
     .navbar-border{
@@ -597,9 +680,13 @@ border: 360 solid rgb(47, 47, 47);
         margin-top: 10px;
     }
 
+    .body-container{
+        width: 330px;
+        margin-left:15px;
+     }
 }
 
-/***********************************************************/
+/**********Responsive for mobile which have width 320 such as iphone 5/SE *********/
 @media only screen and (max-width: 320px) {
 
     .navbar-border{
@@ -645,10 +732,32 @@ border: 360 solid rgb(47, 47, 47);
        padding: 0px;
     }
 
+    .body-container{
+        width: 250px;
+        margin-left: 35px;
+     }     
+    
+    .card-style{
+        width: 160px;
+        height:160px;
+    }
+
+    .card-image{
+        width:100px;
+        height:90px;
+    }
+        
+    .card-title{
+       font-size: 16px;
+    }   
+
+    .om-oss-button{
+        font-size: 20px;
+    }
 
 }
 
-/***********************************************************/
+/**********Responsive for mobile which have width 280 such as Galaxy Fold *********/
 @media only screen and (max-width: 280px) {
 
     .navbar-border{
@@ -695,5 +804,30 @@ border: 360 solid rgb(47, 47, 47);
         padding: 0;
         width: 100%;
     }
+
+    .body-container{
+        width: 250px;
+        margin-left: 15px;
+     }     
+    
+    .card-style{
+        width: 160px;
+        height:160px;
+    }
+
+    .card-image{
+        width:100px;
+        height:90px;
+    }
+        
+    .card-title{
+       font-size: 16px;
+    } 
+    
+    .om-oss-button{
+        font-size: 20px;
+    }
+
+
 
 }
