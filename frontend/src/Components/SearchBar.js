@@ -15,10 +15,11 @@ const SearchBar = () => {
   return (
   <>
 
-    <Container>
+    <Container className="search-bar-position">
          <Row>
-            <Col xs={2} sm={1}></Col>
-            <Col xs={8} sm={10}>
+            <Col xs={1} sm={2}></Col>
+
+            <Col xs={10} sm={8} className="search-bar-col">
 
                 <InputGroup className="search-bar">
 
@@ -28,17 +29,18 @@ const SearchBar = () => {
                         onChange={(e)=>setUserInput(e.target.value)}
                         placeholder="Sök för Produkt, affär, Stad" 
                         required
+                        className="placeholder-text"
                     />
                   
-                    
-                    <Button variant="light" id="button-addon2"  aria-label='sök'>
-                    <Link to={`/SearchResult/${userInput}`} > <ImSearch/> </Link>
+                    <Button  aria-label='sök' style={{backgroundColor:"white", border:"1px solid #ced4da"}}>
+                    <Link to={`/SearchResult/${userInput}`} style={{color:"black"}} > <ImSearch/> </Link>
                     </Button>            
                         
                 </InputGroup> 
 
             </Col>
-            <Col xs={2} sm={1}></Col>
+
+            <Col xs={1} sm={2}></Col>
         </Row>
     </Container>        
 

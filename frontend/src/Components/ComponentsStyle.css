@@ -56,6 +56,16 @@
 }
 
 
+/*********************************SearchBar style***********************************/
+
+.search-bar-position{
+   width:400px;
+}
+
+.search-bar{
+    margin-top: 40px;
+}
+
 /*****************************Gategories Style*****************************/
 
 .body-container{
@@ -279,11 +289,6 @@ justify-content: center;
     height: 500px;
 }
 
-/*********************************SearchBar style***********************************/
-
-.search-bar{
-    margin-top: 30px;
-}
 
 /********************************WrongInput Style***************************************/
 
@@ -399,6 +404,11 @@ border: 360 solid rgb(47, 47, 47);
     .icons-container{
         margin-left: 14px;
     }    
+
+    .search-bar-position{
+        margin-left: 14px;
+     }
+     
 }
 
 /*****************************************************/
@@ -418,7 +428,12 @@ border: 360 solid rgb(47, 47, 47);
 
     .icons-container{
         margin-left: 7px;
-    }    
+    }   
+
+    .search-bar-position{
+        margin-left: 7px;
+     }
+    
     
 }
 
@@ -436,6 +451,14 @@ border: 360 solid rgb(47, 47, 47);
     .brand{
         width:412px;
     }
+
+    .icons-container{
+        margin-left: 6px;
+    }   
+
+    .search-bar-position{
+        margin-left: 6px;
+     }
     
 }
 
@@ -463,6 +486,10 @@ border: 360 solid rgb(47, 47, 47);
         width: 70px;
         height: 45px;
     }
+
+    .search-bar-position{
+        width:380px;    
+     }
     
 }
 
@@ -523,6 +550,13 @@ border: 360 solid rgb(47, 47, 47);
         height: 60px;
     }
   
+    .search-bar-position{
+        width:362px;
+    }
+
+    .search-bar{
+        margin-top: 10px;
+    }
 }
 
 /***********************************************************/
@@ -541,7 +575,7 @@ border: 360 solid rgb(47, 47, 47);
     }
 
     .icons-container{
-        width: 365px;
+        width: 360px;
         margin-left: 0;
     }
     
@@ -551,8 +585,16 @@ border: 360 solid rgb(47, 47, 47);
      } 
      
      .icon-img{
-        width: 90px;
-        height: 55px;
+        width: 100px;
+        height: px;
+    }
+
+    .search-bar-position{
+        width:348px;
+    }
+
+    .search-bar{
+        margin-top: 10px;
     }
 
 }
@@ -587,6 +629,22 @@ border: 360 solid rgb(47, 47, 47);
         height: 70px;
     }
 
+    .search-bar-position{
+        width:307px;
+    }
+
+    .search-bar{
+        margin-top: 10px;
+    }
+
+    .placeholder-text{
+        font-size: 16px;
+    }
+
+    .search-bar-col{
+       padding: 0px;
+    }
+
 
 }
 
@@ -618,6 +676,24 @@ border: 360 solid rgb(47, 47, 47);
      .icon-img{
         width: 150px;
         height: 80px;
+    }
+
+    .search-bar-position{
+        width:250px;
+        margin-left: 15px;
+    }
+
+    .search-bar{
+        margin-top: 10px;
+    }
+
+    .placeholder-text{
+        font-size: 15px;
+    }
+
+    .search-bar-col{
+        padding: 0;
+        width: 100%;
     }
 
 }
