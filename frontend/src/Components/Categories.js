@@ -56,7 +56,7 @@ const Categories = () => {
                 <Col>
                     <div className="flex-container">
                         { categories && categories.map((category) => (
-                                                        
+                         
                             <Link to ={`/Products/${category._id}`} className="category-link" key={category._id}> 
                             
                                 <Card className="card-style" >
@@ -68,7 +68,8 @@ const Categories = () => {
                             
                                 </Card>
                                 
-                            </Link>                       
+                            </Link>
+                                                   
                             ))
                         }
                     </div>

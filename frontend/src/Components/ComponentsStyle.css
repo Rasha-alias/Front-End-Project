@@ -142,6 +142,11 @@ justify-content: center;
 
 /*******************************Products Style*********************************/
 
+.body-products-container{
+    width: 400px;
+    margin-top: 30px;
+ }
+
 .products-container{
     width: 100%;
     height:160px;
@@ -169,7 +174,7 @@ justify-content: center;
 
         .product-image{
             height: 70px;
-            width: 12git0px;
+            width: 120px;
         }
 
         .product-name{
@@ -199,8 +204,6 @@ justify-content: center;
                     font-weight: bold;
                     font-size: 15px;
                 }
-
-
 
 
 .right-box{
@@ -242,6 +245,8 @@ justify-content: center;
     border-color: white;
     color:  #0d6efd;
     font-size: 30px;
+    padding:2px;
+    margin-right: 2px;
 }
 
 .image-style{
@@ -389,6 +394,7 @@ border: 360 solid rgb(47, 47, 47);
 
              /**************************Responsive for mobile devices****************************/
 
+
 /**********Responsive for mobile which have width 428 such as iphone 14 plus, iphone 13 pro max*********/
 @media only screen and (max-width: 428px) {
 
@@ -412,6 +418,11 @@ border: 360 solid rgb(47, 47, 47);
         margin-left: 14px;
      }
      
+     .body-container, .body-products-container{
+        margin-left:14px;
+        margin-right: 14px;
+     }
+   
 }
 
 /**********Responsive for mobile which have width 414 such as iphone 6/7/8 plus, iphone XR *********/
@@ -437,12 +448,33 @@ border: 360 solid rgb(47, 47, 47);
         margin-left: 7px;
      }
 
-     .body-container{
+     .body-container, .body-products-container{
        margin-left: 7px;
        margin-right:7px;
        padding:0;
-     } 
+     }
+     
+     .products-container{
+        width: 90%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .product-old-price{
+        font-size: 14px;
+        margin-right: 10px;
+        margin-left: 7px;
+    }
     
+    .product-new-price{
+        font-size: 14px;
+    }
+
+    .link-box{
+        font-size: 25px;
+    }
+
+  
 }
 
 /**********Responsive for mobile which have width 412 such as Samsung Galaxy A5, Galaxy S20 ultra*********/
@@ -468,11 +500,31 @@ border: 360 solid rgb(47, 47, 47);
         margin-left: 6px;
      }
 
-     .body-container{
+     .body-container, .body-products-container{
         margin-left: 6px;
         margin-right:6px;
         padding:0;
       } 
+
+      .products-container{
+        width: 90%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .product-old-price{
+        font-size: 14px;
+        margin-right: 10px;
+        margin-left: 7px;
+    }
+    
+    .product-new-price{
+        font-size: 14px;
+    }
+
+    .link-box{
+        font-size: 25px;
+    }
     
 }
 
@@ -505,7 +557,7 @@ border: 360 solid rgb(47, 47, 47);
         width:380px;    
      }  
 
-     .body-container{
+     .body-container, .body-products-container{
         width: 380px;
      }
      
@@ -526,8 +578,32 @@ border: 360 solid rgb(47, 47, 47);
     
     .card-title{
        font-size: 13px;
-    }    
+    } 
+
+    .products-container{
+        width: 90%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .product-old-price{
+        font-size: 12px;
+        margin-right: 10px;
+        margin-left: 7px;
+    }
     
+    .product-new-price{
+        font-size: 12px;
+    }
+
+    .link-box{
+        font-size: 25px;
+    }
+    
+    .product-adress{
+        font-size: 14px;
+    }    
+  
 }
 
 /**********Responsive for mobile which have width 390 such as iphone 14, 13, 13 Pro, 12 Pro *********/
@@ -555,7 +631,7 @@ border: 360 solid rgb(47, 47, 47);
         height: 45px;
     }
 
-    .body-container{
+    .body-container, .body-products-container{
         width: 380px;
         margin-left: 5px;
         margin-right:5px;
@@ -575,7 +651,40 @@ border: 360 solid rgb(47, 47, 47);
     .card-body{
         height:45px;
     }
-      
+
+    .products-container{
+        width: 90%;
+        margin-left: 19px;
+        margin-right: 19px;
+        padding-left: 5px;
+    }
+
+    .product-name{
+        font-size: 15px;
+    }
+
+    .product-expiration{
+        font-size: 13px;
+    }
+
+    .product-old-price{
+        font-size: 12px;
+        margin-right: 10px;
+        margin-left: 7px;
+    }
+    
+    .product-new-price{
+        font-size: 12px;
+    }
+
+    .link-box{
+        font-size: 25px;
+    }
+    
+    .product-adress{
+        font-size: 13px;
+    }    
+    
 }
 
 /**********Responsive for mobile which have width 375 such as iphone 13 mini, iphone 6/7/8 *********/
@@ -616,7 +725,7 @@ border: 360 solid rgb(47, 47, 47);
         margin-top: 10px;
     }
 
-    .body-container{
+    .body-container, .body-products-container{
         width: 375px;
         margin-left: 0;
         margin-right:0;
@@ -640,6 +749,57 @@ border: 360 solid rgb(47, 47, 47);
     .card-title{
         font-size: 12px;
      }    
+
+     .products-container{
+        width: 84%;
+        height:175px;
+        margin-left: 30px;
+        margin-right: 30px;
+        padding-left: 5px;
+    }
+
+    .product-image{
+        height: 65px;
+        width: 110px;
+    }
+
+    .product-name{
+        font-size: 15px;
+    }
+
+    .product-expiration{
+        font-size: 13px;
+    }
+
+    .product-old-price{
+        font-size: 12px;
+        margin-right: 10px;
+        margin-left: 7px;
+    }
+    
+    .product-new-price{
+        font-size: 12px;
+    }
+
+    .product-icon{
+        height: 65px;
+        width: 110px;
+        margin-bottom: 10px;
+    }
+
+    .link-box{
+        font-size: 20px;
+    }
+
+
+    .link-button{
+        width:45px;
+    }
+    
+    .product-adress{
+        font-size: 13px;
+    }    
+    
 }
 
 /***Responsive for mobile which have width 360 like Andriod large and small such as(Galaxy S5,S8) ***/
@@ -657,7 +817,7 @@ border: 360 solid rgb(47, 47, 47);
         width:360px;
     }
 
-    .icons-container{
+    .icons-container, .body-products-container{
         width: 360px;
         margin-left: 0;
     }
@@ -684,6 +844,59 @@ border: 360 solid rgb(47, 47, 47);
         width: 330px;
         margin-left:15px;
      }
+
+     .products-container{
+        width: 75%;
+        height:200px;
+        flex-wrap: wrap;
+        margin-left: 45px;
+        margin-right: 45px;
+        padding-left: 5px;
+    } 
+
+    .product-image{
+        height: 65px;
+        width: 110px;
+    }
+
+    .product-name{
+        font-size: 15px;
+    }
+
+    .product-expiration{
+        font-size: 13px;
+    }
+
+    .product-old-price{
+        font-size: 12px;
+        margin-right: 10px;
+        margin-left: 7px;
+    }
+    
+    .product-new-price{
+        font-size: 12px;
+    }
+
+    .product-icon{
+        height: 65px;
+        width: 110px;
+        margin-bottom: 10px;
+    }
+
+    .link-box{
+        font-size: 30px;
+        flex:100%;
+        margin-bottom: 5px;
+    }
+
+    .link-button{
+        width:40px;
+        padding:0;
+    }
+    
+    .product-adress{
+        font-size: 13px;
+    }    
 }
 
 /**********Responsive for mobile which have width 320 such as iphone 5/SE *********/
@@ -732,7 +945,7 @@ border: 360 solid rgb(47, 47, 47);
        padding: 0px;
     }
 
-    .body-container{
+    .body-container {
         width: 250px;
         margin-left: 35px;
      }     
@@ -753,6 +966,67 @@ border: 360 solid rgb(47, 47, 47);
 
     .om-oss-button{
         font-size: 20px;
+    }
+
+    .body-products-container{
+        width: 250px;
+        margin-left: 35px;
+    }
+
+    .products-container{
+        width: 100%;
+        height:360px;
+        flex-wrap: column;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 0;
+    } 
+    
+    .left-box{
+        width: 100%;
+    }
+
+    .right-box{
+        width: 100%;
+    }
+
+    .product-image{
+        height: 80px;
+        width: 130px;
+    }
+
+    .product-name{
+        font-size: 18px;
+    }
+
+    .product-expiration{
+        font-size: 18px;
+    }
+
+    .product-old-price{
+        font-size: 18px;
+        margin-right: 10px;
+        margin-left: 7px;
+    }
+    
+    .product-new-price{
+        font-size: 18px;
+    }
+
+    .product-icon{
+        height: 70px;
+        width: 120px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    
+    .product-adress{
+        font-size: 18px;
+        margin-top: 0px;
+    }    
+    .product-city{
+        margin-top: 8px;;
+        font-size: 18px;
     }
 
 }
@@ -828,6 +1102,10 @@ border: 360 solid rgb(47, 47, 47);
         font-size: 20px;
     }
 
-
+    .body-products-container{
+        width: 230px;
+       margin-left: 25px;
+       margin-right: 25px;
+    }
 
 }

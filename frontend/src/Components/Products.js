@@ -63,9 +63,9 @@ const Products = () => {
         <Icons/>
         <SearchBar/>
 
-        <Container className="body-container">
-            <Row>
-                <Col>
+        <Container className="body-products-container">
+            <Row >
+                <Col >
                     <div>
 
                         {products && products.map((product) => (
@@ -120,7 +120,7 @@ const Products = () => {
                                                     }
                                     > 
 
-                                     <MdOutlineArrowForwardIos />
+                                     <MdOutlineArrowForwardIos/>
                                      </Button>
 
                                 </div>
