@@ -474,6 +474,12 @@ border: 360 solid rgb(47, 47, 47);
         font-size: 25px;
     }
 
+    .carosel-container{
+        width: 360px;
+        height:290px;
+        margin-left: 20px;
+        margin-right:20px;
+    }
   
 }
 
@@ -602,7 +608,12 @@ border: 360 solid rgb(47, 47, 47);
     
     .product-adress{
         font-size: 14px;
-    }    
+    }   
+    
+    .carosel-container{
+        width: 342px;
+        height:280px;
+      }
   
 }
 
@@ -684,6 +695,11 @@ border: 360 solid rgb(47, 47, 47);
     .product-adress{
         font-size: 13px;
     }    
+
+    .carosel-container{
+       margin-left: 19px; 
+       margin-right: 19px; 
+      }
     
 }
 
@@ -798,7 +814,14 @@ border: 360 solid rgb(47, 47, 47);
     
     .product-adress{
         font-size: 13px;
-    }    
+    }  
+    
+    .carosel-container{
+        width: 315px;
+        height: 250px;
+        margin-left: 30px; 
+        margin-right: 30px; 
+       }
     
 }
 
@@ -897,6 +920,13 @@ border: 360 solid rgb(47, 47, 47);
     .product-adress{
         font-size: 13px;
     }    
+
+    .carosel-container{
+        width: 270px;
+        height:220px;
+        margin-left: 45px; 
+        margin-right: 45px; 
+       }
 }
 
 /**********Responsive for mobile which have width 320 such as iphone 5/SE *********/
@@ -1029,6 +1059,12 @@ border: 360 solid rgb(47, 47, 47);
         font-size: 18px;
     }
 
+    .carosel-container{
+        width: 250px;
+        height:200px;
+        margin-left: 0; 
+        margin-right:0; 
+       }
 }
 
 /**********Responsive for mobile which have width 280 such as Galaxy Fold *********/
@@ -1107,5 +1143,13 @@ border: 360 solid rgb(47, 47, 47);
        margin-left: 25px;
        margin-right: 25px;
     }
+
+    .carosel-container{
+        width: 230px;
+        height:180px;
+        margin-left: 0; 
+        margin-right:0; 
+       }
+
 
 }

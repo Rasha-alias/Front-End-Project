@@ -14,7 +14,7 @@ import willys2  from "../Images/Carosel/willys2.jpg";
 const Carosel = () => {
 
   return (
-    <div>
+    <div className="carosel-container">
          <Carousel fade className="carosel-style" interval={2000}>
             
             <Carousel.Item className="carousel-item">
