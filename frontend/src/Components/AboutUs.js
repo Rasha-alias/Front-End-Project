@@ -11,7 +11,7 @@ const AboutUs = () => {
 
       <div className="about-us-header">
         <div className="header-text"><sup>Om</sup>SuperSaver</div>
-        <img src={Picture3} alt = "Super Saver " className="tree-image-style"/>
+        <img src={Picture3} alt="Super Saver" className="tree-image-style"/>
       </div>
 
       <div className="paragraph"> Visste du att <strong> 1/3 </strong>av all mat som produceras i världen slängs? </div>
@@ -24,7 +24,7 @@ const AboutUs = () => {
       
       
       <div>
-        <img src={Picture1} alt = "Rädda mat, Om miljö " className="image-style"/>
+        <img src={Picture1} alt = "Rädda mat, Om miljö " className="about-image-style"/>
       </div>
 
     </div>

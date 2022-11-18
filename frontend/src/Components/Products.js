@@ -1,12 +1,13 @@
 import { useState, useEffect} from "react";
 import {useParams } from "react-router-dom";
 import {Container, Row, Col, Modal, Button} from "react-bootstrap";
+import {MdOutlineArrowForwardIos} from "react-icons/md";
 import Map from "../Components/Map";
 import "../Components/ComponentsStyle.css";
-import {MdOutlineArrowForwardIos} from "react-icons/md";
-import Carosel from "./Carosel"
 import Icons from "../Components/Icons";
 import SearchBar from '../Components/SearchBar';
+import Carosel from "./Carosel"
+import Picture1 from "../Images/Picture1.png";
 
 
 
@@ -68,9 +69,17 @@ const Products = () => {
                 <Col >
                     <div>
 
-                        {products && products.map((product) => (
+                        {products && products.map((product, index) => {
 
-                            <div key={product._id} className="products-container"> 
+                         return (index === 3)
+                          
+                         ?
+                         
+                        ( <div key={product._id}> <img src= {Picture1} alt ="Rädda mat, Om miljö " className="products-image-style"/> </div>)
+                        
+                         :
+
+                        ( <div  key={product._id} className="products-container"> 
                            
                                 <div className="left-box">
 
@@ -104,7 +113,7 @@ const Products = () => {
 
                                 </div>
 
-                             
+                                                                 
                                  <div className="link-box">
 
                                  {/** Link to shop name */}
@@ -125,9 +134,8 @@ const Products = () => {
 
                                 </div>
 
-                            </div>
-
-                        ))}
+                            </div> )
+                        })}
                         
                     </div>
                 </Col>
