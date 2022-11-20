@@ -693,7 +693,7 @@ border: 360 solid rgb(47, 47, 47);
     }
 
     .modal-backdrop{
-        height: 851px; /*skade over the height of the mobile(pixel5 & iphone 14 pro) height=852*/
+        height: 851px; /*shade over the height of the mobile(pixel5 & iphone 14 pro) height=852*/
     }
 
     .modal-content{
@@ -819,7 +819,7 @@ border: 360 solid rgb(47, 47, 47);
     }
 
     .modal-backdrop{
-        height: 844px; /*skade over the height of the mobile(pixel5 & iphone 14, 12, 13 pro, 12 pro) height=844*/
+        height: 844px; /*shade over the height of the mobile(pixel5 & iphone 14, 12, 13 pro, 12 pro) height=844*/
     }
     
 }
@@ -992,7 +992,7 @@ border: 360 solid rgb(47, 47, 47);
     }
 
     .modal-backdrop{
-        height: 667px; /*skade over the height of the mobile( iphone 6/7/8) height=667*/
+        height: 667px; /*shade over the height of the mobile( iphone 6/7/8) height=667*/
     }
 
     .modal-content{
@@ -1150,7 +1150,7 @@ border: 360 solid rgb(47, 47, 47);
     }
 
     .modal-backdrop{
-        height: 640px; /*skade over the height of the mobile(galaxy S5 height=640 */
+        height: 640px; /*shade over the height of the mobile(galaxy S5 height=640 */
     }
 
 }
@@ -1345,7 +1345,7 @@ border: 360 solid rgb(47, 47, 47);
     }
 
     .modal-backdrop{
-        height: 568px; /*skade over the height of the mobile(iphone 5/SE) height=868*/
+        height: 568px; /*shade over the height of the mobile(iphone 5/SE) height=868*/
     }
 
     .modal-content{
@@ -1505,7 +1505,7 @@ border: 360 solid rgb(47, 47, 47);
     }
 
     .modal-backdrop{
-        height: 653px; /*skade over the height of the mobile(Galaxy fold) height=653*/
+        height: 653px; /*shade over the height of the mobile(Galaxy fold) height=653*/
     }
 
     .modal-content{
