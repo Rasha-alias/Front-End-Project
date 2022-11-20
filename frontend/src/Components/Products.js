@@ -161,9 +161,9 @@ const Products = () => {
 
         
             <Modal.Body>
-                <Container>
-                    <Row>
-                        <Col xs={12} md={12}>
+                <Container className="modal-body-container">
+                    <Row className="modal-body-row">
+                        <Col className="modal-body-col">
 
                             <Map 
                             latitude={productData.lat}

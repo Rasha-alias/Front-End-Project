@@ -431,15 +431,20 @@ border: 360 solid rgb(47, 47, 47);
         margin-left: 14px;
      }
      
-     .body-container, .body-products-container{
+    .body-container, .body-products-container{
         margin-left:14px;
         margin-right: 14px;
      }
 
-     .about-us{
+    .about-us{
         margin:29px;
-        }
-}
+    }
+
+    .modal-style {
+            margin-left: 14px;
+            margin-right: 14px;   
+    }
+} 
 
 /**********Responsive for mobile which have width 414 such as iphone 6/7/8 plus, iphone XR *********/
 
@@ -507,6 +512,11 @@ border: 360 solid rgb(47, 47, 47);
         margin-left:20px;
         margin-right:20px;
     }
+
+    .modal-style {
+        margin-left: 7px;
+        margin-right: 7px;   
+}
   
 }
 
@@ -561,6 +571,11 @@ border: 360 solid rgb(47, 47, 47);
     .about-us{
         margin:21px;
     }
+
+    .modal-style {
+        margin-left: 6px;
+        margin-right: 6px;   
+}
     
 }
 
@@ -668,6 +683,38 @@ border: 360 solid rgb(47, 47, 47);
     .searched-word{
         font-size: 22px;
     }
+
+    .modal-style{
+        max-width: 373px;
+        height: 750px; 
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 31px;
+    }
+
+    .modal-backdrop{
+        height: 851px; /*skade over the height of the mobile(pixel5 & iphone 14 pro) height=852*/
+    }
+
+    .modal-content{
+        width: 357px;
+        border:0;
+    }
+
+    .modal-dialog, .modal-body-container, .modal-body-row, .modal-body-col{
+        width: 357px;
+    }
+
+    .modal-body{
+        padding: 0px;
+        margin:0;
+        width: 357px;
+    }
+
+    .map-style{
+        width: 333px;
+        height: 500px;
+       }   
 }
 
 /**********Responsive for mobile which have width 390 such as iphone 14, 13, 13 Pro, 12 Pro *********/
@@ -763,6 +810,16 @@ border: 360 solid rgb(47, 47, 47);
 
     .products-image-style{
      margin-left: 19px;
+    }
+
+    .modal-style{
+        margin-left: 8.5px;
+        margin-right: 8.5px;
+        margin-bottom: 24px;
+    }
+
+    .modal-backdrop{
+        height: 844px; /*skade over the height of the mobile(pixel5 & iphone 14, 12, 13 pro, 12 pro) height=844*/
     }
     
 }
@@ -925,6 +982,39 @@ border: 360 solid rgb(47, 47, 47);
     .searched-word{
         font-size: 20px;
     }
+
+    .modal-style{
+        max-width: 350px;
+        height: 550px; 
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 31px;
+    }
+
+    .modal-backdrop{
+        height: 667px; /*skade over the height of the mobile( iphone 6/7/8) height=667*/
+    }
+
+    .modal-content{
+        width: 332px;
+        border:0;
+    }
+
+    .modal-dialog, .modal-body-container, .modal-body-row, .modal-body-col{
+        width: 332px;
+    }
+
+    .modal-body{
+        padding: 0px;
+        margin:0;
+        width: 332px;
+    }
+
+    .map-style{
+        width: 308px;
+        height: 300px;
+       }   
+
 }
 
 /***Responsive for mobile which have width 360 like Andriod large and small such as(Galaxy S5,S8) ***/
@@ -1052,6 +1142,16 @@ border: 360 solid rgb(47, 47, 47);
         margin-left: 45px;
         margin-right: 45px;
        }
+
+       .modal-style{
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 22px;
+    }
+
+    .modal-backdrop{
+        height: 640px; /*skade over the height of the mobile(galaxy S5 height=640 */
+    }
 
 }
 
@@ -1235,6 +1335,46 @@ border: 360 solid rgb(47, 47, 47);
     .searched-word{
         font-size: 19px;
     }
+
+    .modal-style{
+        max-width: 300px;
+        height: 467px; 
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 31px;
+    }
+
+    .modal-backdrop{
+        height: 568px; /*skade over the height of the mobile(iphone 5/SE) height=868*/
+    }
+
+    .modal-content{
+        width: 284px;
+        border:0;
+    }
+
+    .modal-dialog, .modal-body-container, .modal-body-row, .modal-body-col{
+        width: 284px;
+    }
+
+    .modal-body{
+        padding: 0px;
+        margin:0;
+        width: 284px;
+    }
+
+    .map-style{
+        width: 260px;
+        height: 230px;
+       }  
+       
+       .shop-name-adress{
+        font-size: 18px;
+    }
+    .modal-footer > div {
+        font-size: 17px;
+    }
+
 }
 
 /**********Responsive for mobile which have width 280 such as Galaxy Fold *********/
@@ -1355,5 +1495,49 @@ border: 360 solid rgb(47, 47, 47);
         margin-left: 0;
         margin-right: 0;
        }
+
+       .modal-style{
+        max-width: 264px;
+        height: 553px; 
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-bottom: 30px;
+    }
+
+    .modal-backdrop{
+        height: 653px; /*skade over the height of the mobile(Galaxy fold) height=653*/
+    }
+
+    .modal-content{
+        width: 248px;
+        border:0;
+    }
+
+    .modal-dialog, .modal-body-container, .modal-body-row, .modal-body-col{
+        width: 248px;
+    }
+
+    .modal-dialog, .modal-content{
+        height: 500px;
+    }
+
+    .modal-body{
+        padding: 0px;
+        margin:0;
+        width: 248px;
+    }
+
+    .map-style{
+        width: 224px;
+        height: 250px;
+       }  
+       
+       .shop-name-adress{
+        font-size: 16px;
+    }
+    .modal-footer > div {
+        font-size: 15px;
+    }
+
 
 }

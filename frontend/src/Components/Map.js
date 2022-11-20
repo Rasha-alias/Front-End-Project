@@ -15,11 +15,15 @@ if(!isLoaded){
   return(
     <>
 
-      <GoogleMap zoom={15}  center={{lat:latitude, lng:longitude}} mapContainerStyle={{ width: '326px', height: '500px' }}>
+
+
+      <GoogleMap zoom={15}  center={{lat:latitude, lng:longitude}} mapContainerClassName="map-style" >
 
         <Marker position={{lat:latitude, lng:longitude}} />
 
       </GoogleMap>
+
+ 
       
    </> 
 
