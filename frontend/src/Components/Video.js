@@ -2,6 +2,11 @@ import React from 'react';
 import ReactPlayer from 'react-player';
 import "./ComponentsStyle.css";
 
+/*
+  * A function (component) that representing a Video.
+  * @return a short film about sustainable environment .
+*/
+
 const Vedio = () => {
 
     return(

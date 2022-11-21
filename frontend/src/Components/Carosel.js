@@ -11,6 +11,11 @@ import willys1  from "../Images/Carosel/willys1.jpg";
 import willys2  from "../Images/Carosel/willys2.jpg";
 
 
+/*
+  * A function (component) that representing all Carousel.
+  * @return Carousel (images plays on slide).
+  */
+
 const Carosel = () => {
 
   return (

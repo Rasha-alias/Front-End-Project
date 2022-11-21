@@ -1,13 +1,13 @@
 import React from "react";
+import {Container, Navbar }from 'react-bootstrap/';
 import "./ComponentsStyle.css";
 import logo from "../Images/logo.png";
-import {Container, Navbar }from 'react-bootstrap/';
 
-/**
- * Class representing a Header (Navbar).
- * @extends React component
- * @return Nav as components (Brand) that links to its page.
- */
+
+/*
+  * A function (component) that representing a Header.
+  * @return (Brand) logo (Super Saver) that links to its page.
+*/
 
 const Header = () => {
 

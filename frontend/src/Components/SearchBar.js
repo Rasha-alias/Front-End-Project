@@ -6,6 +6,10 @@ import {ImSearch} from "react-icons/im";
 import {Link} from "react-router-dom";
 
 
+/*
+  * A function (component) that representing a Searchbar.
+  * @return Searchbar.
+*/
 
 const SearchBar = () => {
 
@@ -16,7 +20,9 @@ const SearchBar = () => {
   <>
 
     <Container className="search-bar-position">
+
          <Row>
+
             <Col xs={1} sm={2}></Col>
 
             <Col xs={10} sm={8} className="search-bar-col">
@@ -25,15 +31,14 @@ const SearchBar = () => {
 
                     <FormControl
                         name="userInput"    
-                        //**set the value that the user entered in the input state */
-                        onChange={(e)=>setUserInput(e.target.value)}
+                        onChange={(e)=>setUserInput(e.target.value)}   //**set the value that the user entered in the input state */
                         placeholder="Sök för Produkt, affär, Stad" 
-                        required
                         className="placeholder-text"
+                        required
                     />
                   
                     <Button  aria-label='sök' style={{backgroundColor:"white", border:"1px solid #ced4da"}}>
-                    <Link to={`/SearchResult/${userInput}`} style={{color:"black"}} > <ImSearch/> </Link>
+                        <Link to={`/SearchResult/${userInput}`} style={{color:"black"}} > <ImSearch/> </Link>  {/**Search button links to SearchResult to show the products if any is found*/}
                     </Button>            
                         
                 </InputGroup> 

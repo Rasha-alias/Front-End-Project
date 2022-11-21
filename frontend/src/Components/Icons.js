@@ -6,6 +6,11 @@ import willys from "../Images/willys.png";
 import lidel from "../Images/lidel.png";
 
 
+/*
+  * A function (component) that representing Shops Icons.
+  * @return Icons.
+*/
+
 const Icons = () => {
     
   return (

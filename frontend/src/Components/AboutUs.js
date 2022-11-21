@@ -2,12 +2,17 @@ import React from 'react'
 import Picture1 from "../Images/Picture1.png";
 import Picture3 from "../Images/Picture3.png";
 
+
+/*
+  * A function (component) that representing About page.
+  * @return text and images.
+*/
+
 const AboutUs = () => {
 
   return (
 
     <div className="about-us">
-
 
       <div className="about-us-header">
         <div className="header-text"><sup>Om</sup>SuperSaver</div>
@@ -17,10 +22,10 @@ const AboutUs = () => {
       <div className="paragraph"> Visste du att <strong> 1/3 </strong>av all mat som produceras i världen slängs? </div>
 
       <div className="paragraph">Att minska matsvinnet i världen är ett viktigt bidrag till klimatet, 
-      och det är därför vi är här!</div>
+           och det är därför vi är här!</div>
       
       <div className="paragraph">Vårt uppdrag är att hjälpa matbutiker att ta tillvara på så mycket mat som möjligt i butikerna
-          och minska mat som slängs i onödan. Du kan hitta varor som säljs för halva priset genom vår app. </div>
+        och minska mat som slängs i onödan. Du kan hitta varor som säljs för halva priset genom vår app. </div>
       
       
       <div>

@@ -9,9 +9,9 @@ import SearchBar from '../Components/SearchBar';
 
 
 /*
-  * A function (component) that representing all Get-opration for Categories.
-  * @return components (ReadStudentsData)  which they are called in this component.
-  */
+  * A function (component) that representing Get-opration for Categories and display the Categories data in cards.
+  * @return components (Icons), (Searchbar), (Categories)--> image and name of category, (video) and (link button).
+*/
 
 const Categories = () => {
   
@@ -22,12 +22,13 @@ const Categories = () => {
     const [categories, setCategories] = useState([]);
 
 
-    /////////////////////////////////////////////Get Students Data///////////////////////////////////////////
+    /////////////////////////////////////////////Get Categories Data///////////////////////////////////////////
 
 /**
-     * An async function to get the categories Data from MongoDB 
-     * @return caregories data from 
-    */
+ * An async function to get the categories Data from MongoDB 
+ * @return caregories data 
+*/
+
  const getCategoriesData = async () => {
 
     /**waiting for the categories URL response */
@@ -52,12 +53,13 @@ const Categories = () => {
         <SearchBar/>
 
         <Container className="body-container">
+
             <Row>
                 <Col>
                     <div className="flex-container">
                         { categories && categories.map((category) => (
                          
-                            <Link to ={`/Products/${category._id}`} className="category-link" key={category._id}> 
+                            <Link to ={`/Products/${category._id}`} className="category-link" key={category._id}>  {/**when a klick on a spesific category (by id) it will link to the its products on products page  */}
                             
                                 <Card className="card-style" >
                                     <Card.Img className="card-image" variant="top" src={category.image}/>
@@ -76,19 +78,21 @@ const Categories = () => {
                 </Col>
             </Row>
 
+
             <Row>
-                <Col >
-               <div className="video-position">
-                   <Video/>
-                </div>
+                <Col>
+                    <div className="video-position">
+                        <Video/>  {/** call video component */}
+                    </div>
                 </Col>
             </Row>
+
 
             <Row>
                 <Col>
                     <div className="button-position">
                         <Button aria-label='Om Oss' className="om-oss-button">
-                            <Link to ={"/AboutUs"}> <div className="om-oss-button"> Läs om Super Saver</div> </Link>
+                            <Link to ={"/AboutUs"}> <div className="om-oss-button"> Läs om Super Saver</div> </Link>  {/** a button that links to About page */}
                         </Button>
                     </div>
                 </Col>

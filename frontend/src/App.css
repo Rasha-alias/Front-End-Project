@@ -1,8 +1,10 @@
+/********************App begin wih the width 430 for the iphone 14 pro max*************************/
 .App{
   width:430px;
 }
 
-/********************************************/
+
+/********************App with 428 for iphone 14 plus, iphone 13 pro max*************************/
 @media only screen and (max-width: 428px) {
 
   .App{
@@ -11,7 +13,7 @@
 }
 
 
-/*********************************************/
+/********************App with 414 for iphone 6/7/8 plus, iphone XR ***************************/
 @media only screen and (max-width: 414px) {
 
   .App{
@@ -20,7 +22,7 @@
 }
 
 
-/*********************************************/
+/********************App with 412 for Samsung Galaxy A5, Galaxy S20 ultra ********************/
 @media only screen and (max-width: 412px) {
 
   .App{
@@ -28,7 +30,8 @@
   }
 }
 
-/*********************************************/
+
+/********************App with 393 for iphone 14 pro, Pixel 5*************************/
 @media only screen and (max-width: 393px) {
 
   .App{
@@ -36,7 +39,8 @@
   }
 }
 
-/*********************************************/
+
+/********************App with 390 for iphone 14, 13, 13 Pro, 12 Pro *************************/
 @media only screen and (max-width: 390px) {
 
   .App{
@@ -44,7 +48,8 @@
   }
 }
 
-/*********************************************/
+
+/*********************App with 375 for iphone 13 mini, iphone 6/7/8************************/
 @media only screen and (max-width: 375px) {
 
   .App{
@@ -52,7 +57,8 @@
   }
 }
 
-/*********************************************/
+
+/**********************App with 360 for Andriod large and small such as(Galaxy S5,S8)***********************/
 @media only screen and (max-width: 360px) {
 
   .App{
@@ -60,7 +66,8 @@
   }
 }
 
-/*********************************************/
+
+/**********************App with 320 for iphone 5/SE***********************/
 @media only screen and (max-width: 320px) {
 
   .App{
@@ -68,7 +75,8 @@
   }
 }
 
-/*********************************************/
+
+/**********************App with 280 for Galaxy Fold***********************/
 @media only screen and (max-width: 280px) {
 
   .App{

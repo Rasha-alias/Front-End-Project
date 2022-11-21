@@ -9,30 +9,33 @@ import SearchBar from '../Components/SearchBar';
 import Map from "../Components/Map";
 import WrongInput from "../Components/WrongInput";
 import Picture2 from "../Images/Picture2.png";
-import Carosel from "./Carosel"
 
 
+/*
+  * A function (SearchResult component) that representing Get-opration for Products and display them in boxes.
+  * @return components (Icons), (Searchbar), (Products Data in boxes), (picture) and (Modal).
+*/
 
 const SearchResult = () => {
 
     const {value} = useParams();
 
-    /** URL for the port with products and save it in a varaible  */
+    /** URL for the port with searchresult and save it in a varaible  */
     const products_URL =`http://localhost:5000/SearchResult/${value}`
 
     /** set Varible (products) the initial state to an empty array */
     const [products, setProducts] = useState([]);
 
 
-    /////////////////////////////////////////////Get Products Data///////////////////////////////////////////
+     /////////////////////////////////////////////Get Products Data///////////////////////////////////////////
     /**
-     * An async function to get theproducts categories Data from MongoDB 
+     * An async function to get the products Data from MongoDB 
      * @return products data from 
     */
 
     const getProductsData = async () => {
 
-    /**waiting for the products URL response */
+    /**waiting for the Searchresult URL response */
     const response = await fetch(products_URL);
 
     /**  wating for json data response and convert it to JS objects*/
@@ -55,12 +58,12 @@ const SearchResult = () => {
     const [productData, setProductData] = useState("rasha");
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////Set product data in a variable///////////////////////////////////////////////////////////////////////
 
 var  productsArray = products && products  
                     .map((product) => (
 
-                        <div key={product._id} className="products-container" > {/**link to the shop */}
+                        <div key={product._id} className="products-container" > 
                     
                             <div className="left-box">
 
@@ -78,8 +81,8 @@ var  productsArray = products && products
                                 <div className="product-adress" >
                                     
                                     <button onClick={()=> {
-                                                            setProductData(product);
-                                                            setShow(true);
+                                                            setProductData(product);  {/**Set product data in productData variable when the user click the address button, to use product data in the Modal */}
+                                                            setShow(true);            {/**to display Modal when the user clicks the address button */}
                                                             }}
 
                                             data-toggle="modal" > 
@@ -96,14 +99,13 @@ var  productsArray = products && products
 
                             <div className="link-box">
 
-                            {/** Link to shop name */}
-                            {/* <a href={product.link_to_shop}>   <MdOutlineArrowForwardIos/> </a>*/}
+                            {/** Link to shop page */}
 
                                 {/**button that open a new window for the Shop page link */}
                                 <Button className="link-button"  
                                         onClick={()=> window.open (
                                                                     `${product.link_to_shop}`,
-                                                                    "ShopLinkWindow",
+                                                                    "ShopLinkWindow",            /** open window in this page */
                                                                     "height=932 , width=430"
                                                                 )  
                                                 }
@@ -121,6 +123,7 @@ var  productsArray = products && products
     return (
     <>
         <Icons/>
+
         <SearchBar/>
     
         <Container className="body-products-container">
@@ -128,21 +131,24 @@ var  productsArray = products && products
                     <Col>
                         <div>
                             
-                            { productsArray.length ? productsArray: <WrongInput/> }
+                            { productsArray.length ? productsArray: <WrongInput/> }   {/** Display products array that matches the enterd product by the user in the searchbar, Otherwise call Wrong Page */}
                         
                         </div>
 
                     </Col>
                 </Row>
+
                 
                 <Row>
                     <Col>
-                        <img src={Picture2} alt = "Rädda mat, Om miljö " className="products-image-style" style={{opacity:"0.9"}}/>
+                        <img src={Picture2} alt = "Rädda mat, Om miljö " className="products-image-style" style={{opacity:"0.9"}}/>   {/** display a picture */}
                     </Col>
                 </Row>
-            </Container>
 
-                            
+            </Container>
+               
+
+          {/** Modal*/}
 
             <Modal show={show} onHide={()=>setShow(false)}  className="modal-style">
                 
@@ -159,8 +165,8 @@ var  productsArray = products && products
                             <Col xs={12} md={12}>
 
                                 <Map 
-                                latitude={productData.lat}
-                                longitude={productData.lng}      
+                                latitude={productData.lat}     /** pass product lat to Map component */
+                                longitude={productData.lng}    /** pass product lng to Map component */   
                                 />
 
                             </Col>
@@ -171,11 +177,13 @@ var  productsArray = products && products
 
                 <Modal.Footer className="modal-footer"> 
 
-                <div className="shop-name-adress"> {productData.shop_name} {productData.adress}</div>
-                <div> Öppet Idag:  <span>{productData.opening_hours}</span>  </div> 
-                <div>{productData.adress}, {productData.city}</div>  
+                    {/** Display shop name, opening hours, city for the product in modals footer */}
 
-                <Button variant="secondary" onClick={()=>setShow(false)} style={{marginLeft:"auto"}} >Stäng </Button>
+                    <div className="shop-name-adress"> {productData.shop_name} {productData.adress}</div>
+                    <div> Öppet Idag:  <span>{productData.opening_hours}</span>  </div> 
+                    <div>{productData.adress}, {productData.city}</div>  
+
+                    <Button variant="secondary" onClick={()=>setShow(false)} style={{marginLeft:"auto"}} >Stäng </Button>
 
                 </Modal.Footer>
                                             

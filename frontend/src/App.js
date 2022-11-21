@@ -3,15 +3,19 @@ import {Routes,Route} from "react-router-dom";
 import Header from "./Components/Header";
 import Categories from "./Components/Categories";
 import Products from './Components/Products';
-import Icons from "./Components/Icons";
-import SearchBar from './Components/SearchBar';
 import SearchResult from './Components/SearchResult';
 import AboutUs from './Components/AboutUs';
 
 
+/*
+  * A function that representing App.
+  * @return Header and a page(component) to any of the paths below.
+*/
 
 const App = () => {
+
   return (
+    
     <div className="App">
      
       <Header/>

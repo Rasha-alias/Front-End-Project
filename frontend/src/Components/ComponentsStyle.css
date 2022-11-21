@@ -1,7 +1,8 @@
+/*import fonts from google font*/
+
 @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,600&family=Merienda&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,600&family=Merienda&family=Noto+Serif+Ethiopic&display=swap');
-
 
 
 /*******************************Header style*************************************/
@@ -140,6 +141,7 @@ justify-content: center;
  font-family: 'Noto Serif Ethiopic', serif;
 }
 
+
 /*******************************Products Style*********************************/
 
 .body-products-container{
@@ -251,7 +253,9 @@ justify-content: center;
     margin-right: 2px;
 }
 
+
 /**************************Images Style****************************/
+
 .about-image-style{
     height: 200px;
     width:370px;
@@ -267,6 +271,7 @@ justify-content: center;
     border-radius: 10px;
     opacity: 1;
 }
+
 
 /*************************************Modal-style*************************************/
 
@@ -300,6 +305,7 @@ justify-content: center;
             color: rgb(29, 71, 29);
         }
 
+
 /*********************************Map-Style****************************************/
 
 .map-style{
@@ -322,11 +328,13 @@ justify-content: center;
     text-align: center;
 }
 
+
 /*******************************ShopLinkWindow*********************************/
 .shop-link-window{
     height: 930px;
     width:430px;
 }
+
 
 /*******************************Carosel Style**********************************/
 
@@ -339,6 +347,7 @@ justify-content: center;
 .carousel-inner{
     border-radius: 20px;
 }
+
 
 /*****************************Video Style*************************/
 
@@ -355,6 +364,7 @@ border: 360 solid rgb(47, 47, 47);
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 
 /************************************About Us Style****************************/
 
@@ -446,6 +456,7 @@ border: 360 solid rgb(47, 47, 47);
     }
 } 
 
+
 /**********Responsive for mobile which have width 414 such as iphone 6/7/8 plus, iphone XR *********/
 
 @media only screen and (max-width: 414px) {
@@ -516,9 +527,9 @@ border: 360 solid rgb(47, 47, 47);
     .modal-style {
         margin-left: 7px;
         margin-right: 7px;   
+    } 
 }
-  
-}
+
 
 /**********Responsive for mobile which have width 412 such as Samsung Galaxy A5, Galaxy S20 ultra*********/
 
@@ -530,7 +541,7 @@ border: 360 solid rgb(47, 47, 47);
 
     .navbar-container{
         width:412px;
-      }
+    }
 
     .brand{
         width:412px;
@@ -542,15 +553,15 @@ border: 360 solid rgb(47, 47, 47);
 
     .search-bar-position{
         margin-left: 6px;
-     }
+    }
 
-     .body-container, .body-products-container{
+    .body-container, .body-products-container{
         margin-left: 6px;
         margin-right:6px;
         padding:0;
-      } 
+    } 
 
-      .products-container{
+    .products-container{
         width: 90%;
         margin-left: 20px;
         margin-right: 20px;
@@ -575,9 +586,9 @@ border: 360 solid rgb(47, 47, 47);
     .modal-style {
         margin-left: 6px;
         margin-right: 6px;   
+    }   
 }
-    
-}
+
 
 /**********Responsive for mobile which have width 393 such as iphone 14 pro, Pixel 5 *********/
 
@@ -589,7 +600,7 @@ border: 360 solid rgb(47, 47, 47);
 
     .navbar-container{
         width:393px;
-      }
+    }
 
     .brand{
         width:393px;
@@ -607,19 +618,19 @@ border: 360 solid rgb(47, 47, 47);
 
     .search-bar-position{
         width:380px;    
-     }  
+    }  
 
-     .body-container, .body-products-container{
+    .body-container, .body-products-container{
         width: 380px;
-     }
+    }
      
-     .card-style{
+    .card-style{
          width: 140px;
          height:140px;
          margin: 10px;
-     }
+    }
 
-     .card-image{
+    .card-image{
         width:95px;
         height:75px;
     }
@@ -658,9 +669,9 @@ border: 360 solid rgb(47, 47, 47);
     .carosel-container{
         width: 342px;
         height:280px;
-      }
+    }
 
-      .about-us{
+    .about-us{
         margin:26px;
         width:341px; 
     }
@@ -677,7 +688,6 @@ border: 360 solid rgb(47, 47, 47);
     .wrong-word-message{
         font-size: 22px;
         margin: 20px;
-
     }
     
     .searched-word{
@@ -714,10 +724,12 @@ border: 360 solid rgb(47, 47, 47);
     .map-style{
         width: 333px;
         height: 500px;
-       }   
+    }   
 }
 
+
 /**********Responsive for mobile which have width 390 such as iphone 14, 13, 13 Pro, 12 Pro *********/
+
 @media only screen and (max-width: 390px) {
 
     .navbar-border{
@@ -746,15 +758,15 @@ border: 360 solid rgb(47, 47, 47);
         width: 380px;
         margin-left: 5px;
         margin-right:5px;
-     }
+    }
      
-     .card-style{
+    .card-style{
          width: 135px;
          height:135px;
          margin: 12px 5px 12px 5px;
-     }
+    }
 
-     .card-image{
+    .card-image{
         width:80px;
         height:70px;
     }
@@ -798,9 +810,9 @@ border: 360 solid rgb(47, 47, 47);
     .carosel-container{
        margin-left: 19px; 
        margin-right: 19px; 
-      }
+    }
 
-      .about-us{
+    .about-us{
         width:338px; 
     }
 
@@ -820,11 +832,12 @@ border: 360 solid rgb(47, 47, 47);
 
     .modal-backdrop{
         height: 844px; /*shade over the height of the mobile(pixel5 & iphone 14, 12, 13 pro, 12 pro) height=844*/
-    }
-    
+    }   
 }
 
+
 /**********Responsive for mobile which have width 375 such as iphone 13 mini, iphone 6/7/8 *********/
+
 @media only screen and (max-width: 375px) {
 
     .navbar-border{
@@ -833,7 +846,7 @@ border: 360 solid rgb(47, 47, 47);
 
     .navbar-container{
         width:375px;
-      }
+    }
 
     .brand{
         width:375px;
@@ -849,7 +862,7 @@ border: 360 solid rgb(47, 47, 47);
         padding-bottom: 30px;
      } 
      
-     .icon-img{
+    .icon-img{
         width: 100px;
         height: 60px;
     }
@@ -866,15 +879,15 @@ border: 360 solid rgb(47, 47, 47);
         width: 375px;
         margin-left: 0;
         margin-right:0;
-     }
+    }
      
-     .card-style{
+    .card-style{
          width: 130px;
          height:130px;
          margin: 12px 5px 12px 5px;
-     }
+    }
 
-     .card-image{
+    .card-image{
         width:80px;
         height:70px;
     }
@@ -885,9 +898,9 @@ border: 360 solid rgb(47, 47, 47);
 
     .card-title{
         font-size: 12px;
-     }    
+    }    
 
-     .products-container{
+    .products-container{
         width: 84%;
         height:190px;
         flex-wrap: wrap;
@@ -942,9 +955,9 @@ border: 360 solid rgb(47, 47, 47);
         height: 250px;
         margin-left: 30px; 
         margin-right: 30px; 
-       }
+    }
 
-       .about-us{
+    .about-us{
         margin:17px;
     }
    
@@ -970,7 +983,7 @@ border: 360 solid rgb(47, 47, 47);
         width:315px;
         margin-left: 30px;
         margin-right: 30px;
-       }
+    }
 
     .wrong-word-message{
         font-size: 20px;
@@ -1013,11 +1026,12 @@ border: 360 solid rgb(47, 47, 47);
     .map-style{
         width: 308px;
         height: 300px;
-       }   
-
+    }   
 }
 
-/***Responsive for mobile which have width 360 like Andriod large and small such as(Galaxy S5,S8) ***/
+
+/***Responsive for mobile which have width 360 such as Andriod large and small such as(Galaxy S5,S8) ***/
+
 @media only screen and (max-width: 360px) {
 
     .navbar-border{
@@ -1026,7 +1040,7 @@ border: 360 solid rgb(47, 47, 47);
 
     .navbar-container{
         width:360px;
-      }
+    }
 
     .brand{
         width:360px;
@@ -1040,9 +1054,9 @@ border: 360 solid rgb(47, 47, 47);
     .icons{
         flex:50%;
         padding-bottom: 25px;
-     } 
+    } 
      
-     .icon-img{
+    .icon-img{
         width: 100px;
         height: px;
     }
@@ -1057,9 +1071,9 @@ border: 360 solid rgb(47, 47, 47);
 
     .body-container{
         width: 360px;
-     }
+    }
 
-     .products-container{
+    .products-container{
         width: 80%;
         height:200px;
         flex-wrap: wrap;
@@ -1116,7 +1130,7 @@ border: 360 solid rgb(47, 47, 47);
         height:220px;
         margin-left: 45px; 
         margin-right: 45px; 
-       }
+    }
 
        .about-us{
         margin:30px;
@@ -1141,7 +1155,7 @@ border: 360 solid rgb(47, 47, 47);
         height:170px;
         margin-left: 45px;
         margin-right: 45px;
-       }
+    }
 
        .modal-style{
         margin-left: 5px;
@@ -1152,10 +1166,11 @@ border: 360 solid rgb(47, 47, 47);
     .modal-backdrop{
         height: 640px; /*shade over the height of the mobile(galaxy S5 height=640 */
     }
-
 }
 
+
 /**********Responsive for mobile which have width 320 such as iphone 5/SE *********/
+
 @media only screen and (max-width: 320px) {
 
     .navbar-border{
@@ -1164,7 +1179,7 @@ border: 360 solid rgb(47, 47, 47);
 
     .navbar-container{
         width:320px;
-      }
+    }
 
     .brand{
         width:320px;
@@ -1204,7 +1219,7 @@ border: 360 solid rgb(47, 47, 47);
     .body-container {
         width: 250px;
         margin-left: 35px;
-     }     
+    }     
     
     .card-style{
         width: 160px;
@@ -1289,7 +1304,7 @@ border: 360 solid rgb(47, 47, 47);
         height:200px;
         margin-left: 0; 
         margin-right:0; 
-       }
+    }
        
        .about-us{
         width:260px;
@@ -1325,7 +1340,7 @@ border: 360 solid rgb(47, 47, 47);
         height:160px;
         margin-left: 0;
         margin-right: 0;
-       }
+    }
 
        .wrong-word-message{
         font-size: 19px;
@@ -1366,18 +1381,20 @@ border: 360 solid rgb(47, 47, 47);
     .map-style{
         width: 260px;
         height: 230px;
-       }  
+    }  
        
        .shop-name-adress{
         font-size: 18px;
     }
+
     .modal-footer > div {
         font-size: 17px;
     }
-
 }
 
+
 /**********Responsive for mobile which have width 280 such as Galaxy Fold *********/
+
 @media only screen and (max-width: 280px) {
 
     .navbar-border{
@@ -1386,7 +1403,7 @@ border: 360 solid rgb(47, 47, 47);
 
     .navbar-container{
         width:280px;
-      }
+    }
 
     .brand{
         width:280px;
@@ -1428,7 +1445,7 @@ border: 360 solid rgb(47, 47, 47);
     .body-container{
         width: 250px;
         margin-left: 15px;
-     }     
+    }     
     
     .card-style{
         width: 160px;
@@ -1459,7 +1476,7 @@ border: 360 solid rgb(47, 47, 47);
         height:180px;
         margin-left: 0; 
         margin-right:0; 
-       }
+    }
 
        .about-us{
         width:230px;
@@ -1494,7 +1511,7 @@ border: 360 solid rgb(47, 47, 47);
         height:150px;
         margin-left: 0;
         margin-right: 0;
-       }
+    }
 
        .modal-style{
         max-width: 264px;
@@ -1530,14 +1547,13 @@ border: 360 solid rgb(47, 47, 47);
     .map-style{
         width: 224px;
         height: 250px;
-       }  
+    }  
        
        .shop-name-adress{
         font-size: 16px;
     }
+
     .modal-footer > div {
         font-size: 15px;
     }
-
-
 }
